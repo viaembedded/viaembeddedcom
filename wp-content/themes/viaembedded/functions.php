@@ -66,6 +66,9 @@ function viaembedded_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Editor style, http://codex.wordpress.org/Function_Reference/add_editor_style
+	add_editor_style( 'custom-editor-style.css' );
 }
 endif; // viaembedded_setup
 add_action( 'after_setup_theme', 'viaembedded_setup' );

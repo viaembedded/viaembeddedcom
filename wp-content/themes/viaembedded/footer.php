@@ -12,9 +12,21 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'viaembedded' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'viaembedded' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'viaembedded' ), 'VIA Embedded', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<div>
+				<strong>Americas</strong><br>
+				<a href="tel:+1-510-687-4688">+1-510-687-4688</a><br>
+				<a href="mailto:embedded@viatech.com">embedded@viatech.com</a>
+			</div>
+			<div>
+				<strong>Europe</strong><br>
+				<a href="tel:+49-228-688565-0">+49-228-688565-0</a><br>
+				<a href="mailto:embedded@viatech.eu">embedded@viatech.eu</a>
+			</div>
+			<div>
+				<strong>Rest of the World</strong><br>
+				<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
+				<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

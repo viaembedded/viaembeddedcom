@@ -92,7 +92,9 @@ add_action( 'widgets_init', 'viaembedded_widgets_init' );
  * Enqueue scripts and styles.
  */
 function viaembedded_scripts() {
-	wp_enqueue_style( 'viaembedded-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'viaembedded-style', get_stylesheet_uri(), false, filemtime( get_stylesheet_directory() . '/style.css') );
+
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'viaembedded-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

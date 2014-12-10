@@ -12,7 +12,30 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div id="product-thumb"><?php the_post_thumbnail( $size, $attr ); ?></div>
+	  <!-- <div id="product-thumb"><?php the_post_thumbnail( $size, $attr ); ?></div> -->
+	  <div id="product-thumb">
+	  <div id="slides">
+	      <?php
+		 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'slideshow' );
+	         $thumb_url = $thumb[0];
+	      ?>
+	      <img src="<?php echo $thumb_url;?>">
+	  <?php
+	     if (class_exists('MultiPostThumbnails')) {
+	        for($i=1; $i<5; $i++) {
+	 	   $thumb = MultiPostThumbnails::get_post_thumbnail_id('page', 'additional-image-'.$i, $post->ID);
+  	           $thumb_src = wp_get_attachment_image_src($thumb,'page-secondary-image-'.i.'-slideshow');
+	           $thumb_url = $thumb_src[0];
+	           if (strlen($thumb_url) > 0) {
+                     ?>
+	        <img src="<?php echo $thumb_url;?>">
+	             <?
+	           }
+		}
+	     }
+	  ?>
+	  </div>
+	  </div>
 		<div id="product-highlights">
 			<?php $shop_link = get_post_meta( get_the_ID(), 'shop-link', true );
 			if( ! empty( $shop_link ) ) {

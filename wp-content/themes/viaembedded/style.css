@@ -834,3 +834,14 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+
+/*------------------
+Slider
+----------------------*/
+
+/* Prevents slides from flashing */
+#slides {
+    display:none;
+}

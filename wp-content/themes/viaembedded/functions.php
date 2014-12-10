@@ -38,7 +38,22 @@ function viaembedded_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'slideshow', 400, 275, true );
+	set_post_thumbnail_size( 400, 275, true ); // 400 pixels wide by 275 pixels tall, crop mode
+
+	/* Add a maximum of 5 additional images. */
+	if (class_exists('MultiPostThumbnails')) {
+	  for($i=1; $i<5; $i++) {
+	    new MultiPostThumbnails(
+				    array(
+					  'label' => 'Additional Image #'.$i,
+					  'id' => 'additional-image-'.$i,
+					  'post_type' => 'page'
+					  )
+				    );
+	  }
+	}
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -97,7 +112,11 @@ add_action( 'widgets_init', 'viaembedded_widgets_init' );
 function viaembedded_scripts() {
 	wp_enqueue_style( 'viaembedded-style', get_stylesheet_uri(), false, filemtime( get_stylesheet_directory() . '/style.css') );
 
-	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+	// wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+	wp_enqueue_script( 'viaembedded-jquery', get_template_directory_uri() . '/js/lib/jquery.min.js', array(), null, true );
+	wp_enqueue_script( 'viaembedded-jquery-slides', get_template_directory_uri() . '/js/lib/jquery.slides.min.js', array('viaembedded-jquery'), null, true );
+	wp_enqueue_script( 'viaembedded-slider', get_template_directory_uri() . '/js/slider.js', array('viaembedded-jquery-slides'), null, true );
 
 	wp_enqueue_script( 'viaembedded-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

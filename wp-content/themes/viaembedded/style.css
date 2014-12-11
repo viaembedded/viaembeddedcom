@@ -856,4 +856,5 @@ Slider
 /* Prevents slides from flashing */
 #slides {
     display:none;
+    max-width: 400px;
 }

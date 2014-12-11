@@ -45,6 +45,30 @@ and Blueprint http://www.blueprintcss.org/
 	12.2 Galleries
 --------------------------------------------------------------*/
 
+
+/* =Full-width structure
+-------------------------------------------------------------- */
+
+.full { /* #{name}-row get .full to span 100% of the device width */
+	width: 100%;
+}
+
+.main { /* gives the appearance of a content container while maintaining a full-width design */
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.inner { /* a simple way to style first children of all .main elements */
+	padding: 1em 0;
+}
+
+* { /* keep all site elements their true width. Ex. padding gets subtracted from width */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/

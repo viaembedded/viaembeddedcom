@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 body#tinymce.wp-editor { 
-    font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif;
     margin: 10px; 
 }
 

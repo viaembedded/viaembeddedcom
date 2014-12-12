@@ -43,6 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+        12.3 Tables (Tablepress)
 13.0 Specific pages
         13.1 Product Page
 --------------------------------------------------------------*/
@@ -871,6 +872,31 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+12.3 Tables (Tablepress)
+--------------------------------------------------------------*/
+
+table.tablepress {
+    width: 95%;
+    margin: 0 auto;
+}
+
+table.tablepress,
+table.tablepress th,
+table.tablepress td {
+    border: 1px solid black;
+}
+
+table.tablepress thead th {
+    background: #007AC9;
+    color: white;
+}
+
+table.downloads .column-2,
+table.downloads .column-3 {
+    width: 170px;
 }
 
 /*--------------------------------------------------------------

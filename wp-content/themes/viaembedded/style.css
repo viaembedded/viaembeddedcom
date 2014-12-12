@@ -989,3 +989,30 @@ Slider
     display:none;
     max-width: 400px;
 }
+
+/*--------------------------------------------------------------
+??.? Site Header
+--------------------------------------------------------------*/
+
+#head-banner {
+    background: #007AC2;
+}
+
+#head-banner {
+    background: #007AC2 url("images/header.png") no-repeat center;
+    height: 98px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* postioning: http://stackoverflow.com/a/11127437/171237 */
+#home-link {
+    position: absolute;
+    top: 0px;
+    right:50%;
+    width: 98px;
+    height: 98px;
+    margin-right: 295px; /* depends on #head-banner background image size */
+    background-color: transparent;
+    border: none;
+}

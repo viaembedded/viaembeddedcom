@@ -19,15 +19,18 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="banner-row" class="full">
+	<div class="full">
+		<header id="head-banner" class="site-header inner" role="banner">
+                         <a id="home-link" href="/"></a>
+		</header><!-- #masthead -->
+	</div><!-- .main -->
+</div><!-- #banner-row -->
+
 <div id="header-row" class="full">
 	<div class="main">
 		<?php do_action( 'before' ); ?>
-		<header id="masthead" class="site-header inner" role="banner">
-			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</div>
-
+		<header id="masthead" class="inner">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'fwu' ); ?></h1>
 				<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'fwu' ); ?>"><?php _e( 'Skip to content', 'fwu' ); ?></a></div>

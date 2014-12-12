@@ -911,9 +911,9 @@ table.t-datasheet .column-1,
 table.t-datasheet .row-1 .column-2 {
     font-weight: bold;
 }
-table.tablepress,
-table.tablepress th,
-table.tablepress td {
+table.t-datasheet,
+table.t-datasheet tr,
+table.t-datasheet tbody td {
     border: none;
 }
 table.t-datasheet tr {

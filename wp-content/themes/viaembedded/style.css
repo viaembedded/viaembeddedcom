@@ -899,6 +899,12 @@ table.downloads .column-3 {
     width: 170px;
 }
 
+/* Ordering info table */
+table.t-ordering .column-1,
+table.t-ordering .column-2 {
+    width: 200px;
+}
+
 /*--------------------------------------------------------------
 13.0 Specific pages
 --------------------------------------------------------------*/

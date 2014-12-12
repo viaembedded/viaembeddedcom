@@ -1016,3 +1016,11 @@ Slider
     background-color: transparent;
     border: none;
 }
+
+/*--------------------------------------------------------------
+??.? Yoast Breadcrumbs
+--------------------------------------------------------------*/
+
+p#breadcrumbs {
+    margin: 0;
+}

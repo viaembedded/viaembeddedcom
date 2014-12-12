@@ -37,6 +37,10 @@
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
+
+                       <?php if ( function_exists('yoast_breadcrumb') ) {
+                          yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                       } ?>
 		</header><!-- #masthead -->
 	</div><!-- .main -->
 </div><!-- #header-row -->

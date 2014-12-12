@@ -895,8 +895,11 @@ table.tablepress thead th {
 }
 
 /* Downloads table */
-table.downloads .column-2,
-table.downloads .column-3 {
+table.t-downloads {
+    margin-bottom: 10px;
+}
+table.t-downloads .column-2,
+table.t-downloads .column-3 {
     width: 170px;
 }
 

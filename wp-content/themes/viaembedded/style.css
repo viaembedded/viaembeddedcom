@@ -894,6 +894,7 @@ table.tablepress thead th {
     color: white;
 }
 
+/* Downloads table */
 table.downloads .column-2,
 table.downloads .column-3 {
     width: 170px;

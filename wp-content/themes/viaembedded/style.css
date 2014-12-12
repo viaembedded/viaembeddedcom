@@ -724,6 +724,11 @@ a:active {
 	position: relative;
 }
 
+article.page .entry-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;

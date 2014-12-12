@@ -36,7 +36,7 @@
 	  ?>
 	  </div>
 	  </div>
-		<div id="product-highlights">
+		<div id="product-info">
 			<?php $shop_link = get_post_meta( get_the_ID(), 'shop-link', true );
 			if( ! empty( $shop_link ) ) {
 				echo "<div id=\"shop-link\"><a class=\"fasc-button fasc-size-medium fasc-type-flat fasc-rounded-medium fasc-ico-before dashicons-cart\"
@@ -48,7 +48,7 @@ data-fasc-style=\"background-color:#0079C2;color:#ffffff;\">Order Sample</a>
 			?>
 			<?php $highlights = get_post_meta( get_the_ID(), 'product-highlight', false );
 			if( ! empty( $highlights ) ) {
-				echo "<ul class=\"product-highlights\">";
+				echo "<ul id=\"product-highlights\">";
 				foreach ($highlights as $line) {
 					echo "<li class=\"product-highlights-item\">$line</li>";
 				}

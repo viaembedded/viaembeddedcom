@@ -43,6 +43,8 @@ and Blueprint http://www.blueprintcss.org/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+13.0 Specific pages
+        13.1 Product Page
 --------------------------------------------------------------*/
 
 
@@ -727,7 +729,7 @@ a:active {
 }
 
 #product-thumb,
-#product-highlights {
+#product-info {
 	width: 50%;
 	float: left;
 }
@@ -871,7 +873,18 @@ object {
 	display: block;
 }
 
+/*--------------------------------------------------------------
+13.0 Specific pages
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+13.1 Product page
+--------------------------------------------------------------*/
+
+ul#product-highlights {
+    list-style-image: url("images/diamond.png");
+    line-height: 180%
+}
 
 /*------------------
 Slider

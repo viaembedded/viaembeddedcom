@@ -886,7 +886,7 @@ table.tablepress {
 table.tablepress,
 table.tablepress th,
 table.tablepress td {
-    border: 1px solid black;
+    border: thin solid black;
 }
 
 table.tablepress thead th {
@@ -904,6 +904,21 @@ table.downloads .column-3 {
 table.t-ordering .column-1,
 table.t-ordering .column-2 {
     width: 200px;
+}
+
+/* Data Sheet table */
+table.t-datasheet .column-1,
+table.t-datasheet .row-1 .column-2 {
+    font-weight: bold;
+}
+table.tablepress,
+table.tablepress th,
+table.tablepress td {
+    border: none;
+}
+table.t-datasheet tr {
+    border-top: thin solid black;
+    border-bottom: thin solid black;
 }
 
 /*--------------------------------------------------------------

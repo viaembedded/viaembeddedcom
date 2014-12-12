@@ -776,6 +776,44 @@ article.page .entry-content {
 }
 
 /*--------------------------------------------------------------
+10.5 Headers
+--------------------------------------------------------------*/
+
+#h-hardware,
+#h-software,
+#h-expansions,
+#h-applications {
+    color: #007AC2;
+    margin-top: 45px;
+}
+
+#h-hardware:before,
+#h-software:before,
+#h-expansions:before,
+#h-applications:before {
+    width: auto;
+    content: " ";
+    padding: 60px 41px 30px 25px;
+}
+
+#h-hardware:before {
+    background: url("images/h-hardware.png") no-repeat center;
+}
+
+#h-software:before {
+    background: url("images/h-software.png") no-repeat center;
+}
+
+#h-expansions:before {
+    background: url("images/h-expansions.png") no-repeat center;
+}
+
+#h-applications:before {
+    background: url("images/h-applications.png") no-repeat center;
+}
+
+
+/*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */

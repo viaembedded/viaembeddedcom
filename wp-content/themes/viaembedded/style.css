@@ -978,9 +978,14 @@ table.t-ordering .column-2 {
 }
 
 /* Data Sheet table */
-table.t-datasheet .column-1,
-table.t-datasheet .row-1 .column-2 {
+table.t-datasheet .column-1 {
     font-weight: bold;
+}
+table.t-datasheet tr.row-1 td,
+table.t-datasheet tr.row-1:hover td {
+    font-size: x-large;
+    color: white;
+    background: #007AC2;
 }
 table.t-datasheet,
 table.t-datasheet tr,

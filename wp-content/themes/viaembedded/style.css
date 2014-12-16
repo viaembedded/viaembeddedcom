@@ -983,6 +983,7 @@ table.t-datasheet .column-1 {
 }
 table.t-datasheet tr.row-1 td,
 table.t-datasheet tr.row-1:hover td {
+    font-weight: bold;
     font-size: x-large;
     color: white;
     background: #007AC2;

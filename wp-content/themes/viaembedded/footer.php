@@ -13,9 +13,21 @@
 </div><!-- #content-row -->
 
 <div id="footer-row" class="full">
+	<div id="footer-banner" class="full">
+		<ul>
+	               <li><a href="/products/">Products</a></li>
+	               <li><a href="/solutions/">Solutions</a></li>
+	               <li><a href="/services/">Services</a></li>
+	               <li><a href="/contact/">Contact</a></li>
+	               <li><a href="/store/">Store</a></li>
+		</ul>
+	</div>
 	<div class="main">
 		<footer id="colophon" class="site-footer inner" role="contentinfo">
 			<div class="site-info">
+				<div>
+					<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" width="249" height="48" alt="VIA Embedded Logo"></a>
+				</div>
 				<div>
 					<strong>Americas</strong><br>
 					<a href="tel:+1-510-687-4688">+1-510-687-4688</a><br>

@@ -790,14 +790,66 @@ article.page .entry-content {
 10.4 Footer elements
 --------------------------------------------------------------*/
 .site-info {
-	width: 100%;
+    width: 100%;
+    font-size: smaller;
+    display: table;
 }
 
 .site-info div {
-	float:left;
-	padding: 5px;
+    float: none;
+    padding: 5px;
+    margin: 10px 10px;
+    display: table-cell;
+    vertical-align:middle;
+}
+
+#footer-banner {
+    background: #007AC2;
+}
+
+#footer-banner ul{
+    display: table;
+    margin: 0 auto;
+}
+
+#footer-banner ul li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 30px;
+    color: white;
+    font-size: x-large;
+}
+
+#footer-banner ul li a,
+#footer-banner ul li a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-banner ul li a:active,
+#footer-banner ul li a:focus,
+#footer-banner ul li a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 767px) {
+    .site-info {
+	display: block;
+	width: inherit;
 	margin: 0 auto;
-	width: 33%
+    }
+
+    .site-info div {
+	display: block;
+	text-align: center;
+    }
+
+    #footer-banner ul li {
+	display: table-row;
+    }
 }
 
 /*--------------------------------------------------------------

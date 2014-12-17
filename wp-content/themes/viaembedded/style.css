@@ -1142,7 +1142,8 @@ Slider
     #site-navigation {
 	clear: none;
 	float: none;
-	padding-top: 10px;
+	padding-top: 5px;
+	font-size: larger;
     }
 
     #site-navigation > div.menu > ul > li.page_item {

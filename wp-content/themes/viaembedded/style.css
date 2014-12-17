@@ -59,9 +59,9 @@ and Blueprint http://www.blueprintcss.org/
 }
 
 .main { /* gives the appearance of a content container while maintaining a full-width design */
-	max-width: 1040px;
+	max-width: 1060px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 50px;
 }
 
 @media (max-width: 767px) {

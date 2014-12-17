@@ -857,6 +857,10 @@ article.page .entry-content {
     #footer-banner ul li {
 	display: table-row;
     }
+
+    #footer-logo {
+	display: none;
+    }
 }
 
 /*--------------------------------------------------------------

@@ -59,8 +59,15 @@ and Blueprint http://www.blueprintcss.org/
 }
 
 .main { /* gives the appearance of a content container while maintaining a full-width design */
-	width: 1024px;
+	max-width: 1040px;
 	margin: 0 auto;
+	padding: 0 40px;
+}
+
+@media (max-width: 767px) {
+    .main {
+	padding: 0px 10px;
+    }
 }
 
 .inner { /* a simple way to style first children of all .main elements */

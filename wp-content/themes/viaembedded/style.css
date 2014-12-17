@@ -1111,6 +1111,56 @@ Slider
     border: none;
 }
 
+@media screen and (min-width: 768px) {
+
+    #banner-row {
+	height: 98px;
+	background: #007AC2;
+    }
+
+    .banner-section {
+	height: 98px;
+    }
+
+    #banner-left {
+	float: left;
+    }
+
+    #banner-center {
+	background: white;
+    }
+
+    #banner-right {
+	float: right;
+    }
+
+    #banner-logo {
+	display:block;
+	margin:auto;
+    }
+
+    #site-navigation {
+	clear: none;
+	float: none;
+	padding-top: 10px;
+    }
+
+    #site-navigation > div.menu > ul > li.page_item {
+	border-left: 2px solid #89dcdb;
+	margin-left: 5px;
+	padding-left: 5px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    #banner-left,
+    #banner-right {
+	display: none;
+    }
+}
+
 /*--------------------------------------------------------------
 ??.? Yoast Breadcrumbs
 --------------------------------------------------------------*/

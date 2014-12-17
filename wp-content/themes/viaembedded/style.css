@@ -479,11 +479,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #007AC2;
 }
 
 a:visited {
-	color: purple;
+	color: darkblue;
 }
 
 a:hover,

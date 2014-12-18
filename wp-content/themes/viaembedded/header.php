@@ -30,7 +30,9 @@
     </div><!-- #banner-right -->
 
     <div class="banner-section" id="banner-center">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" id="banner-logo">
+      <div id="banner-logo-outer">
+	<img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" id="banner-logo">
+      </div>
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
 	<h1 class="menu-toggle"><?php _e( 'Menu', 'fwu' ); ?></h1>

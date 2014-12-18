@@ -39,20 +39,21 @@
 		<div id="product-info">
 			<?php $shop_link = get_post_meta( get_the_ID(), 'shop-link', true );
 			if( ! empty( $shop_link ) ) {
-				echo "<div id=\"shop-link\"><a class=\"fasc-button fasc-size-medium fasc-type-flat fasc-rounded-medium fasc-ico-before dashicons-cart\"
-style=\"background-color: #007AC2; color: #ffffff;\" href=\"$shop_link\"
-data-fasc-style=\"background-color:#007AC2;color:#ffffff;\">Order Sample</a>
+				echo "<div id=\"shop-link\">
+<a class=\"fasc-button fasc-size-medium fasc-type-flat fasc-rounded-medium fasc-ico-before dashicons-cart\" style=\"background-color: #007AC2; color: #ffffff;\" href=\"$shop_link\" data-fasc-style=\"background-color:#007AC2;color:#ffffff;\">Order Sample</a>
 </div>
 ";
 			}
 			?>
 			<?php $highlights = get_post_meta( get_the_ID(), 'product-highlight', false );
 			if( ! empty( $highlights ) ) {
+			        echo "<div id=\"product-highlights-outer\">";
 				echo "<ul id=\"product-highlights\">";
 				foreach ($highlights as $line) {
 					echo "<li class=\"product-highlights-item\">$line</li>";
 				}
 				echo "</ul>";
+				echo "</div>";
 			}
 			?>
 		</div>

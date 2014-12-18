@@ -766,12 +766,21 @@ article.page .entry-content {
 	margin: 0 0 1.5em;
 }
 
-#product-thumb,
+#product-thumb {
+    width: 50%;
+    float: left;
+}
 #product-info {
-	width: 50%;
-	float: left;
+    width: 50%;
+    float: left;
 }
 #shop-link {
+    height: 41px;
+    position: relative;
+}
+#shop-link > a{
+    position: absolute;
+    right: 20px;
 }
 
 #content {

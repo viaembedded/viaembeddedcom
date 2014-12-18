@@ -1142,7 +1142,7 @@ Slider
     #banner-logo {
 	position: absolute;
 	left: 50%;
-	margin-left: 120px;
+	margin-left: -120px;
     }
 
     #site-navigation {

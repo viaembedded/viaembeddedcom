@@ -1145,10 +1145,30 @@ Slider
 	margin-left: -120px;
     }
 
-    #site-navigation {
+    #banner-logo-outer {
+	position: relative;
+	height:50px;
+    }
+    #banner-logo {
+	position: absolute;
+	left: 50%;
+	margin-left: -120px;
+    }
+
+    #site-navigation-outer {
 	clear: none;
 	float: none;
 	padding-top: 5px;
+	position: relative;
+	height: 50px;
+	width: 100%
+    }
+    #site-navigation {
+	position: absolute;
+	left: 50%;
+	margin-left: -260px;
+	clear: none;
+	float: none;
 	font-size: larger;
     }
 

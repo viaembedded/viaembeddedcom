@@ -49,9 +49,14 @@
 	<div class="main">
 		<?php do_action( 'before' ); ?>
 		<header id="masthead" class="inner">
-                       <?php if ( function_exists('yoast_breadcrumb') ) {
-                          yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-                       } ?>
+                  <?php if ( function_exists('yoast_breadcrumb') ) {
+			echo "<div id=\"breadcrumbs-outer\">";
+			  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			echo "</div>";
+			} ?>
+		       <div id="search-outer">
+			 <?php get_search_form(); ?>
+		       </div>
 		</header><!-- #masthead -->
 	</div><!-- .main -->
 </div><!-- #header-row -->

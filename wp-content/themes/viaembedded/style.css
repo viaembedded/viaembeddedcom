@@ -1038,6 +1038,11 @@ table.tablepress thead th {
     color: white;
 }
 
+h2.tablepress-table-name {
+    padding: 0.5em 0;
+    font-size: x-large;
+}
+
 /* Downloads table */
 table.t-downloads {
     margin-bottom: 10px;
@@ -1209,10 +1214,27 @@ Slider
 ??.? Yoast Breadcrumbs
 --------------------------------------------------------------*/
 
+#breadcrumbs-outer {
+    float: left;
+}
+
 p#breadcrumbs {
     margin: 0;
     clear: both;
 }
+
+/*--------------------------------------------------------------
+??.? Search
+--------------------------------------------------------------*/
+
+#search-outer {
+    float: right;
+}
+
+#search-outer > form > input {
+    display: none;
+}
+
 
 /*--------------------------------------------------------------
 ??.? Responsive Tabs (Tabby)

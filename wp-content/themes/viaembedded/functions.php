@@ -82,6 +82,9 @@ function viaembedded_setup() {
 		'default-image' => '',
 	) ) );
 
+	// Add search form support, see http://codex.wordpress.org/Function_Reference/get_search_form
+	add_theme_support( 'html5', array( 'search-form' ) );
+
 	// Editor style, http://codex.wordpress.org/Function_Reference/add_editor_style
 	add_editor_style( 'custom-editor-style.css' );
 }

@@ -767,11 +767,10 @@ article.page .entry-content {
 }
 
 #product-thumb {
-    width: 50%;
+    width: 400px;
     float: left;
 }
 #product-info {
-    width: 50%;
     float: left;
 }
 #shop-link {
@@ -1106,6 +1105,26 @@ ul#product-highlights {
     font-weight: bold;
 }
 
+#product-summary {
+    display: table;
+}
+
+#product-summary > div {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+@media (max-width: 899px) {
+
+    #product-summary > div {
+	display: table-row;
+	float: none;
+    }
+
+}
+
+
 /*------------------
 Slider
 ----------------------*/
@@ -1114,6 +1133,7 @@ Slider
 #slides {
     display:none;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 /*--------------------------------------------------------------

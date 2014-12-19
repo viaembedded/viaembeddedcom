@@ -11,7 +11,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content product-content">
 	  <!-- <div id="product-thumb"><?php the_post_thumbnail( $size, $attr ); ?></div> -->
 	  <div id="product-thumb">
 	  <div id="slides">

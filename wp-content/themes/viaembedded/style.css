@@ -884,7 +884,6 @@ article.page .entry-content {
 #h-software,
 #h-expansions,
 #h-applications {
-    color: #007AC2;
     margin-top: 45px;
 }
 
@@ -1094,6 +1093,16 @@ table.t-datasheet tr {
 ul#product-highlights {
     list-style-image: url("images/diamond.png");
     line-height: 180%
+}
+
+.product-content h1,
+.product-content h2,
+.product-content h3,
+.product-content h4,
+.product-content h5,
+.product-content h6 {
+    color: #007AC2;
+    font-weight: bold;
 }
 
 /*------------------

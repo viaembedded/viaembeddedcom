@@ -1092,7 +1092,8 @@ table.t-datasheet tr {
 
 ul#product-highlights {
     list-style-image: url("images/diamond.png");
-    line-height: 180%
+    line-height: 180%;
+    text-align: left;
 }
 
 .product-content h1,

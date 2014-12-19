@@ -26,7 +26,7 @@
 		<footer id="colophon" class="site-footer inner" role="contentinfo">
 			<div class="site-info">
 				<div id="footer-logo">
-					<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" width="249" height="48" alt="VIA Embedded Logo"></a>
+					<a href="/" alt="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" width="249" height="48" alt="VIA Embedded Logo"></a>
 				</div>
 				<div>
 					<strong>Americas</strong><br>

@@ -22,7 +22,9 @@
 <div id="banner-row" class="full">
   <header class="main">
     <div class="banner-section" id="banner-left">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/header-left.png" width="149" heoght="98">
+      <a href="/" alt="Home" class="home-links">
+	<img src="<?php echo get_template_directory_uri(); ?>/images/header-left.png" width="149" height="98">
+      </a>
     </div><!-- #banner-left -->
 
     <div class="banner-section" id="banner-right">
@@ -31,7 +33,9 @@
 
     <div class="banner-section" id="banner-center">
       <div id="banner-logo-outer">
-	<img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" id="banner-logo">
+	<a href="/" alt="Home">
+	  <img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" id="banner-logo">
+	</a>
       </div>
 
       <div id="site-navigation-outer">

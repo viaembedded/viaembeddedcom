@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
 	play: {
 	    active: false,
             effect: "slide",
-	    interval: 2000,
+	    interval: 5000,
 	    auto: true,
 	    swap: true,
 	    pauseOnHover: true,

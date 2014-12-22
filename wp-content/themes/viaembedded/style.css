@@ -882,14 +882,16 @@ article.page .entry-content {
 #h-hardware,
 #h-software,
 #h-expansions,
-#h-applications {
+#h-applications,
+#h-solutions {
     margin-top: 45px;
 }
 
 #h-hardware:before,
 #h-software:before,
 #h-expansions:before,
-#h-applications:before {
+#h-applications:before,
+#h-solutions:before {
     width: auto;
     content: " ";
     padding: 60px 41px 30px 25px;
@@ -909,6 +911,10 @@ article.page .entry-content {
 
 #h-applications:before {
     background: url("images/h-applications.png") no-repeat center;
+}
+
+#h-solutions:before {
+    background: url("images/h-solutions.png") no-repeat center;
 }
 
 

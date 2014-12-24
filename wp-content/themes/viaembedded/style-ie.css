@@ -1,0 +1,125 @@
+/*--------------------------------------------------------------
+Site Header
+--------------------------------------------------------------*/
+
+#banner-row {
+    height: 98px;
+    background: #007AC2;
+}
+
+.banner-section {
+    height: 98px;
+}
+
+#banner-left {
+    width: 140px;
+    float: left;
+}
+
+#banner-center {
+    background: white;
+}
+
+#banner-right {
+    width: 56px;
+    float: right;
+}
+
+/* based on http://stackoverflow.com/questions/6783902/offset-div-from-center */
+#banner-logo-outer {
+    position: relative;
+    height:50px;
+}
+
+#banner-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+}
+
+#banner-logo-outer {
+    position: relative;
+    height:50px;
+}
+#banner-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+}
+
+#site-navigation-outer {
+    clear: none;
+    float: none;
+    padding-top: 5px;
+    position: relative;
+    height: 50px;
+    width: 100%
+}
+
+#site-navigation {
+    position: absolute;
+    left: 50%;
+    margin-left: -260px;
+    clear: none;
+    float: none;
+    font-size: larger;
+}
+
+#site-navigation > div.menu > ul > li:nth-child(n+3) {
+    border-left: 2px solid #89dcdb;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#site-navigation > div.menu > ul > li:nth-child(1) {
+    display: none;  /* hide Home menu */
+}
+
+/*--------------------------------------------------------------
+ Tabby
+--------------------------------------------------------------*/
+
+div.tabcontent[role="tabpanel"],
+h2.tabtitle {
+    border: 0;
+}
+
+.responsive-tabs  ul.responsive-tabs__list {
+    display: table;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.responsive-tabs__list > .responsive-tabs__list__item {
+    border: 0;
+    margin: 0 auto;
+    background: #007AC2;
+    padding: 15px 22px;
+    color: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    top: 0px;
+    display: table-cell;
+    float: none;
+    text-align: center;
+    font-size: large;
+}
+
+.responsive-tabs__list > .responsive-tabs__list__item:hover {
+    top: 0px;
+    color: black;
+    background: #007AC2;
+    padding-bottom: 15px;
+}
+
+.responsive-tabs__list > .responsive-tabs__list__item--active,
+.responsive-tabs__list > .responsive-tabs__list__item:focus {
+    top: 0px;
+    background: #6d6e71;
+    color: white;
+    padding-bottom: 15px;
+}

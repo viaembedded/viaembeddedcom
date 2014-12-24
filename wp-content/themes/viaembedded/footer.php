@@ -50,5 +50,9 @@
 
 <?php wp_footer(); ?>
 
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style-ie.css"></script>
+<![endif]-->
+
 </body>
 </html>

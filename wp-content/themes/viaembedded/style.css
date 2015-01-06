@@ -1139,6 +1139,9 @@ ul#product-highlights {
 .product-content h6 {
     color: #007AC2;
     font-weight: bold;
+    margin-bottom: 0.2em;
+    font-size: 100%;
+    font-style: inherit;
 }
 
 #product-summary {

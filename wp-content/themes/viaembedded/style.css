@@ -533,7 +533,7 @@ a:active {
 
 .main-navigation ul ul a {
     width: 250px;
-    padding: 6px;
+    margin: 6px 6px 6px 10px;
 }
 
 .main-navigation ul ul li {

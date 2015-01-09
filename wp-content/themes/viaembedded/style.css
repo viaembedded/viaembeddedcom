@@ -1114,6 +1114,10 @@ table.t-datasheet tr {
     border-bottom: thin solid black;
 }
 
+table.t-c1-fixwidth .column-1{
+    width: 200px;
+}
+
 /*--------------------------------------------------------------
 13.0 Specific pages
 --------------------------------------------------------------*/

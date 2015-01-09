@@ -1095,6 +1095,7 @@ table.t-ordering .column-2 {
 /* Data Sheet table */
 table.t-datasheet .column-1 {
     font-weight: bold;
+    width: 200px;
 }
 table.t-datasheet tr.row-1 td,
 table.t-datasheet tr.row-1:hover td {

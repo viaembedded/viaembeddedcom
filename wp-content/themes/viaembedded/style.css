@@ -1324,12 +1324,16 @@ table#frontpaget1 {
 --------------------------------------------------------------*/
 
 #breadcrumbs-outer {
-    float: left;
+    padding-bottom: 1em;
 }
 
 p#breadcrumbs {
     margin: 0;
     clear: both;
+}
+
+body.home #breadcrumbs-outer {
+    display: none;
 }
 
 /*--------------------------------------------------------------

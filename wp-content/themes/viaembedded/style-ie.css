@@ -75,6 +75,16 @@ Site Header
     display: none;  /* hide Home menu */
 }
 
+#footer-logo {
+    display: none;
+}
+
+div.site-info {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
  Tabby
 --------------------------------------------------------------*/

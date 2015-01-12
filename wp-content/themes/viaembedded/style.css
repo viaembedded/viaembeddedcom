@@ -1067,7 +1067,7 @@ object {
 
 table.tablepress {
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
 }
 
 table.tablepress,

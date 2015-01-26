@@ -1242,44 +1242,22 @@ table#frontpaget1 {
 
     #banner-row {
 	height: 98px;
-	background: #007AC2;
+	background: white;
     }
 
     .banner-section {
 	height: 98px;
     }
 
-    #banner-left {
-	float: left;
-    }
-
     #banner-center {
-	background: white;
     }
 
-    #banner-right {
+    #banner-logo-outer {
+	position: relative;
+	height:50px;
+    }
+    #banner-logo {
 	float: right;
-    }
-
-    /* based on http://stackoverflow.com/questions/6783902/offset-div-from-center */
-    #banner-logo-outer {
-	position: relative;
-	height:50px;
-    }
-    #banner-logo {
-	position: absolute;
-	left: 50%;
-	margin-left: -120px;
-    }
-
-    #banner-logo-outer {
-	position: relative;
-	height:50px;
-    }
-    #banner-logo {
-	position: absolute;
-	left: 50%;
-	margin-left: -120px;
     }
 
     #site-navigation-outer {

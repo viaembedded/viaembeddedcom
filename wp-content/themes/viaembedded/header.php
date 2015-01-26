@@ -21,20 +21,10 @@
 <body <?php body_class(); ?>>
 <div id="banner-row" class="full">
   <header class="main">
-    <div class="banner-section" id="banner-left">
-      <a href="/" alt="Home" class="home-links">
-	<img src="<?php echo get_template_directory_uri(); ?>/images/header-left.png" width="149" height="98">
-      </a>
-    </div><!-- #banner-left -->
-
-    <div class="banner-section" id="banner-right">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/header-right.png" width="56" height="98">
-    </div><!-- #banner-right -->
-
     <div class="banner-section" id="banner-center">
       <div id="banner-logo-outer">
-	<a href="/" alt="Home">
-	  <img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" id="banner-logo">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="Home">
+	  <img src="<?php echo get_template_directory_uri(); ?>/images/VIA_Embedded_Logo.png" id="banner-logo">
 	</a>
       </div>
     </div><!-- #banner-center -->

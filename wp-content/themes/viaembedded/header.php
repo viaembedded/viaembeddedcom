@@ -37,17 +37,21 @@
 	  <img src="<?php echo get_template_directory_uri(); ?>/images/viaembedded-small.png" id="banner-logo">
 	</a>
       </div>
-
-      <div id="site-navigation-outer">
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-	  <h1 class="menu-toggle"><?php _e( 'Menu', 'fwu' ); ?></h1>
-	  <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'fwu' ); ?>"><?php _e( 'Skip to content', 'fwu' ); ?></a></div>
-	  <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- #site-navigation -->
-      </div><!-- #site-navigation-outer -->
     </div><!-- #banner-center -->
   </header><!-- .main -->
 </div><!-- #banner-row -->
+
+<div id="header-row" class="full">
+	<div class="main">
+	  <div id="site-navigation-outer">
+	    <nav id="site-navigation" class="main-navigation" role="navigation">
+	      <h1 class="menu-toggle"><?php _e( 'Menu', 'fwu' ); ?></h1>
+	      <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'fwu' ); ?>"><?php _e( 'Skip to content', 'fwu' ); ?></a></div>
+	      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	    </nav><!-- #site-navigation -->
+	  </div><!-- #site-navigation-outer -->
+	</div><!-- .main -->
+</div><!-- #header-row -->
 
 <div id="header-row" class="full">
 	<div class="main">

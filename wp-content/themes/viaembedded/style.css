@@ -1291,22 +1291,7 @@ table#frontpaget1 {
 	width: 100%
     }
     #site-navigation {
-	position: absolute;
-	left: 50%;
-	margin-left: -260px;
-	clear: none;
-	float: none;
-	font-size: larger;
-    }
-
-    #site-navigation > div.menu > ul > li:nth-child(n+3) {
-	border-left: 2px solid #89dcdb;
-	margin-left: 5px;
-	padding-left: 5px;
-    }
-
-    #site-navigation > div.menu > ul > li:nth-child(1) {
-	display: none;  /* hide Home menu */
+	width: 100%;
     }
 
 }

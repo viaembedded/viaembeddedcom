@@ -1072,17 +1072,35 @@ object {
 table.tablepress {
     width: 95%;
     margin: 0 auto 1em auto;
+    font: 14px/16px "Open Sans", "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
 }
 
-table.tablepress,
-table.tablepress th,
-table.tablepress td {
-    border: thin solid black;
+table.tablepress {
+    border: none;
 }
 
 table.tablepress thead th {
     background: #007AC2;
     color: white;
+    font-weight: normal;
+    font-size: larger;
+    text-align: center;
+    border: none;
+    border-left: thin solid white;
+    height: 35px;
+}
+
+table.tablepress thead th:first-child {
+    border-left: thin solid #0071C2;
+}
+
+table.tablepress thead th:last-child {
+    border-right: thin solid #0071C2;
+}
+
+table.tablepress tbody td {
+    border: thin solid #0071C2;
+    vertical-align: middle;
 }
 
 h2.tablepress-table-name {
@@ -1121,6 +1139,8 @@ table.t-datasheet,
 table.t-datasheet tr,
 table.t-datasheet tbody td {
     border: none;
+    font-size: 18px;
+    line-height: normal;
 }
 table.t-datasheet tr {
     border-top: thin solid black;

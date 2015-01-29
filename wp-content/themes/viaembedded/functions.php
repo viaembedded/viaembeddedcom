@@ -132,6 +132,13 @@ function viaembedded_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'viaembedded_scripts' );
 
+// External plugin
+function my_mce_external_plugins($plugins) {
+    $plugins['anchor'] = get_template_directory_uri() . '/js/tinymce/plugins/anchor/plugin.min.js';
+    return $plugins;
+}
+add_filter('mce_external_plugins', 'my_mce_external_plugins');
+
 // Enable hidden buttons in the editor
 // based on: http://wptavern.com/how-to-add-subscript-and-superscript-characters-in-wordpress
 // also https://wordpress.org/support/topic/anchor-button
@@ -141,6 +148,7 @@ function enable_more_buttons($buttons) {
 	 */
 	$buttons[] = 'superscript';
 	$buttons[] = 'subscript';
+	$buttons[] = 'anchor';
 
 	return $buttons;
 }

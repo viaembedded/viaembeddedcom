@@ -44,7 +44,7 @@ Responsive Tabs (Tabby)
     .responsive-tabs__list > .responsive-tabs__list__item--active:hover,
     .responsive-tabs__list > .responsive-tabs__list__item:focus {
 	top: 0px;
-	background: #6d6e71;
+	background: #403a3a;
 	color: white;
 	padding-bottom: 15px;
     }

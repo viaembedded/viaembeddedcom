@@ -134,7 +134,8 @@ add_action( 'wp_enqueue_scripts', 'viaembedded_scripts' );
 
 // Enable hidden buttons in the editor
 // based on: http://wptavern.com/how-to-add-subscript-and-superscript-characters-in-wordpress
-function my_mce_buttons_2($buttons) {
+// also https://wordpress.org/support/topic/anchor-button
+function enable_more_buttons($buttons) {
 	/**
 	 * Add in core buttons that are disabled by default
 	 */
@@ -143,7 +144,7 @@ function my_mce_buttons_2($buttons) {
 
 	return $buttons;
 }
-add_filter('mce_buttons_2', 'my_mce_buttons_2');
+add_filter('mce_buttons_2', 'enable_more_buttons');
 
 /**
  * Implement the Custom Header feature.

@@ -82,6 +82,8 @@ function viaembedded_setup() {
 		'default-image' => '',
 	) ) );
 
+	add_theme_support( 'title-tag' );
+
 	// Add search form support, see http://codex.wordpress.org/Function_Reference/get_search_form
 	add_theme_support( 'html5', array( 'search-form' ) );
 

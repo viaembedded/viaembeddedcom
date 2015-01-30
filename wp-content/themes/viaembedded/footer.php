@@ -13,13 +13,6 @@
 </div><!-- #content-row -->
 
 <div id="footer-row" class="full">
-    <?php do_action( 'before' ); ?>
-    <?php if ( function_exists('yoast_breadcrumb') ) {
-	echo "<div id=\"breadcrumbs-outer\" class=\"main\">";
-	yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-	  echo "</div>";
-    } ?>
-
 	<div id="footer-banner" class="full">
 		<ul>
 	               <li><a href="/products/">Products</a></li>

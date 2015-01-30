@@ -462,6 +462,13 @@ input[type="search"]::-webkit-search-decoration { /* Corrects inner padding disp
 	-webkit-appearance: none;
 }
 
+form.search-form::before { /* dashicon magnifying glass */
+    font-family: dashicons;
+    content: "\f179";
+    vertical-align: middle;
+    font-size: x-large;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],

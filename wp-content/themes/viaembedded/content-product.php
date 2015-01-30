@@ -29,7 +29,7 @@
 	        if (strlen($thumb_url) > 0) {
                 ?>
 	           <img src="<?php echo $thumb_url;?>">
-	        <?
+	        <?php
 	        }
 	      }
 	     }

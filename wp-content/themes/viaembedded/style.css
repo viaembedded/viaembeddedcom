@@ -1372,22 +1372,23 @@ a[name] {
 ??.? Page headers
 --------------------------------------------------------------*/
 
-article.page.has-featured-image {
+body.page-template-default article.page.has-featured-image {
     margin-top: 30px;
 }
 
-article.page.has-featured-image header.entry-header {
+body.page-template-default article.page.has-featured-image header.entry-header {
     position: relative;
     margin-bottom: 20px;
 }
 
-article.page.has-featured-image header.entry-header > img {
+body.page-template-default article.page.has-featured-image header.entry-header > img {
     display: block;
     min-width: 100%;
     max-width: 100%;
     height: auto;
 }
-article.page.has-featured-image header.entry-header .entry-title {
+
+body.page-template-default article.page.has-featured-image header.entry-header .entry-title {
     position: absolute;
     top: 50%;
     transform: translate(0, -60%);

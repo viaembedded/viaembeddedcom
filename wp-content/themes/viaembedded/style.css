@@ -1105,7 +1105,7 @@ table.tablepress {
 }
 
 table.tablepress thead th {
-    background: #007AC2;
+    background: #403a3a;
     color: white;
     font-weight: normal;
     font-size: larger;
@@ -1116,15 +1116,15 @@ table.tablepress thead th {
 }
 
 table.tablepress thead th:first-child {
-    border-left: thin solid #0071C2;
+    border-left: thin solid #403a3a;
 }
 
 table.tablepress thead th:last-child {
-    border-right: thin solid #0071C2;
+    border-right: thin solid #403a3a;
 }
 
 table.tablepress tbody td {
-    border: thin solid #0071C2;
+    border: thin solid #403a3a;
     vertical-align: middle;
 }
 

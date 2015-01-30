@@ -94,6 +94,24 @@ endif; // viaembedded_setup
 add_action( 'after_setup_theme', 'viaembedded_setup' );
 
 /**
+ * Add featured image related class to pages
+ *
+ */
+function page_header_image_class( $classes ) {
+	global $post;
+	$post_id = $post->ID;
+
+	if ( has_post_thumbnail( $post_id ) ) {
+	   $classes[] = "has-featured-image";
+	} else {
+	   $classes[] = "no-featured-image";
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'page_header_image_class' );
+
+
+/**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar

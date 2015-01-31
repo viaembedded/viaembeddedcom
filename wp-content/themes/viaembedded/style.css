@@ -1403,3 +1403,107 @@ body.page-template-default article.page.has-featured-image header.entry-header .
     margin: 0;
     max-width: 70%;
 }
+
+/*--------------------------------------------------------------
+??.? Contact form
+--------------------------------------------------------------*/
+
+form.formformat > fieldset {
+    margin-bottom: 20px;
+    padding-left: 0.75em;
+    border: 2px groove;
+}
+
+form.formformat > fieldset > legend {
+    padding: 0 2px;
+    font-weight: bold;
+    font-size: large;
+}
+
+form.formformat fieldset ol {
+    margin: 0;
+    padding: 0;
+}
+
+form.formformat fieldset li {
+    list-style: none;
+    padding: 5px;
+}
+
+form.formformat fieldset li > label,
+form.formformat fieldset li > fieldset > legend {
+    font-weight: bold;
+}
+
+form.formformat fieldset li > input {
+    width: 100%;
+    clear: both;
+}
+
+form.formformat fieldset li > select {
+}
+
+form.formformat fieldset textarea {
+    display: block;
+    height: 200px;
+}
+
+form.formformat fieldset input[type="checkbox"] + label {
+    margin: 0px 30px 0 5px;
+}
+
+form.formformat em {
+    font-weight: bold;
+    font-style: normal;
+    color: #f00;
+    padding-left: 3px;
+}
+
+form.formformat fieldset p.parsley-error {
+    margin: inherit;
+}
+
+.showRow {
+    display: table-row;
+}
+.hidden {
+    display: none;
+}
+
+p.parsley-success,
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6;
+}
+
+p.parsley-error,
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border: 1px solid #EED3D7;
+}
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}

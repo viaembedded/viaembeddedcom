@@ -149,6 +149,12 @@ function viaembedded_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( is_page_template( 'page-contact.php' ) ) {
+	  wp_enqueue_script( 'viaembedded-parsley', get_template_directory_uri() . '/js/lib/parsley.min.js', array('jquery'), null, true );
+	  wp_enqueue_script( 'viaembedded-contact', get_template_directory_uri() . '/js/contact.js', array('viaembedded-parsley'), null, true );
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'viaembedded_scripts' );
 

@@ -52,8 +52,8 @@ function viaembedded_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'viaembedded' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'viaembedded' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'viaembedded' ) );
+			   previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'viaembedded' ), $in_same_term = true, $taxonomy = 'category' );
+	                   next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'viaembedded' ), $in_same_term = true, $taxonomy = 'category');
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

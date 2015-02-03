@@ -19,6 +19,31 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+   <?php
+   $args = array(
+	'type'                     => 'post',
+	'parent'                   => get_query_var('cat'),
+	'orderby'                  => 'name',
+	'order'                    => 'DESC',
+	'hide_empty'               => 1,
+	'taxonomy'                 => 'category',
+	'pad_counts'               => false
+   );
+   $categories = get_categories( $args );
+   if (sizeof($categories) > 0) : ?>
+   <select name="subs-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+   <option value=""><?php echo esc_attr(__('Subcategories')); ?></option>
+     <?php
+        foreach ($categories as $category) {
+          $option = '<option value="/category/'.$category->category_nicename.'">';
+          $option .= $category->cat_name;
+          $option .= ' ('.$category->category_count.')';
+          $option .= '</option>';
+          echo $option;
+        }
+     ?>
+   </select>
+   <?php endif; ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>

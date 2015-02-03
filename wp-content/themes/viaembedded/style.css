@@ -786,6 +786,10 @@ a.nodecorate {
     margin-bottom: 0.2em;
 }
 
+.entry-meta {
+    padding-bottom: 0.25em;
+}
+
 article.category-press .entry-title {
     font-size: 1.6em;
 }

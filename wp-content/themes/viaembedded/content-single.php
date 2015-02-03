@@ -8,6 +8,11 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+                <?php if ( has_post_thumbnail() ) {
+                          the_post_thumbnail('full', array( 'class' => 'aligncenter' ));
+                      }
+                ?>
+
 		<div class="entry-meta">
 			<?php viaembedded_posted_on(); ?>
 		</div><!-- .entry-meta -->

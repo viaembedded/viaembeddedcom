@@ -9,10 +9,11 @@
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-                  <?php if ( has_post_thumbnail() ) {
-                          the_post_thumbnail('full', array( 'class' => 'aligncenter' ));
-                      }
-                  ?>
+                    <?php if ( has_post_thumbnail() ) : ?>
+                          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                          <?php the_post_thumbnail('full', array( 'class' => 'aligncenter' )); ?>
+                          </a>
+                    <?php endif; ?>
 		<div class="entry-meta">
 			<?php viaembedded_posted_on(); ?>
 		</div><!-- .entry-meta -->

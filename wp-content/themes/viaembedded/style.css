@@ -897,6 +897,10 @@ h6 > a {
     vertical-align:middle;
 }
 
+#footer-row {
+    margin-bottom: 0.75em;
+}
+
 #footer-banner {
     background: #007AC2;
 }

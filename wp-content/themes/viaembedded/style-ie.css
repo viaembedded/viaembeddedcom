@@ -4,25 +4,14 @@ Site Header
 
 #banner-row {
     height: 98px;
-    background: #007AC2;
+    background: white;
 }
 
 .banner-section {
     height: 98px;
 }
 
-#banner-left {
-    width: 140px;
-    float: left;
-}
-
 #banner-center {
-    background: white;
-}
-
-#banner-right {
-    width: 56px;
-    float: right;
 }
 
 /* based on http://stackoverflow.com/questions/6783902/offset-div-from-center */
@@ -32,19 +21,7 @@ Site Header
 }
 
 #banner-logo {
-    position: absolute;
-    left: 50%;
-    margin-left: -120px;
-}
-
-#banner-logo-outer {
-    position: relative;
-    height:50px;
-}
-#banner-logo {
-    position: absolute;
-    left: 50%;
-    margin-left: -120px;
+    float: right;
 }
 
 #site-navigation-outer {
@@ -57,22 +34,7 @@ Site Header
 }
 
 #site-navigation {
-    position: absolute;
-    left: 50%;
-    margin-left: -260px;
-    clear: none;
-    float: none;
-    font-size: larger;
-}
-
-#site-navigation > div.menu > ul > li:nth-child(n+3) {
-    border-left: 2px solid #89dcdb;
-    margin-left: 5px;
-    padding-left: 5px;
-}
-
-#site-navigation > div.menu > ul > li:nth-child(1) {
-    display: none;  /* hide Home menu */
+    width: 100%;
 }
 
 #footer-logo {
@@ -87,7 +49,23 @@ div.site-info {
 
 form.search-form:before {
     content: "Search:";
+    font-weight: bold;
 }
+
+/* Image resize trick for IE */
+.entry-content img,
+.entry-header img {
+    height: auto;
+    width: auto;
+}
+
+body.page-template-default article.page.has-featured-image header.entry-header .entry-title {
+    position: absolute;
+    top: 10px;
+    margin: 0;
+    max-width: 70%;
+}
+
 
 /*--------------------------------------------------------------
  Tabby
@@ -136,4 +114,12 @@ h2.tabtitle {
     background: #6d6e71;
     color: white;
     padding-bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+ Ubermenu
+--------------------------------------------------------------*/
+
+ul.ubermenu-submenu li.ubermenu-retractor {
+    display: none;
 }

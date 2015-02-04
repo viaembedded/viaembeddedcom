@@ -40,6 +40,7 @@ function viaembedded_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'slideshow', 400, 275, true );
+	add_image_size( 'frontpage', 450, 150, true );
 	set_post_thumbnail_size( 400, 275, true ); // 400 pixels wide by 275 pixels tall, crop mode
 
 	/* Add a maximum of 5 additional images. */

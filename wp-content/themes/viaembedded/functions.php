@@ -150,8 +150,9 @@ function viaembedded_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_page_template( 'page-contact.php' ) ) {
-	  wp_enqueue_script( 'viaembedded-parsley', get_template_directory_uri() . '/js/lib/parsley.min.js', array('jquery'), null, true );
+	// Contact page
+	// This does not work somehow: if ( is_page_template( 'page-contact.php' ) ) {
+	if ( strcmp(  basename(get_page_template()), 'page-contact.php' ) == 0 ) {
 	  wp_enqueue_script( 'viaembedded-contact', get_template_directory_uri() . '/js/contact.js', array('viaembedded-parsley'), null, true );
 	}
 

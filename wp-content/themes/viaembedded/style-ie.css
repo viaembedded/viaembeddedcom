@@ -66,6 +66,10 @@ body.page-template-default article.page.has-featured-image header.entry-header .
     max-width: 70%;
 }
 
+time.updated {
+    display: none;
+}
+
 
 /*--------------------------------------------------------------
  Tabby

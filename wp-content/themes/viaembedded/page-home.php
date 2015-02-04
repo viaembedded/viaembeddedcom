@@ -50,8 +50,10 @@ get_header(); ?>
 		       'post_status' => 'publish'
 		       );
 	$recent_posts = wp_get_recent_posts( $args );
-	foreach( $recent_posts as $recent ){
-		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+	foreach( $recent_posts as $recent ) {
+	  echo '<a href="'. get_permalink($recent["ID"]) .'">'. get_the_post_thumbnail($recent["ID"], "frontpage") .'</a>';
+	  echo '<h3><a href="'. get_permalink($recent["ID"]) .'">'. $recent["post_title"].'</a></h3>';
+	  echo '<p>'. $recent["post_excerpt"] .'</p>';
 	}
 ?>
 	</div>

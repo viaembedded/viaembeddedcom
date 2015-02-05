@@ -127,3 +127,9 @@ h2.tabtitle {
 ul.ubermenu-submenu li.ubermenu-retractor {
     display: none;
 }
+
+/* Responsive menu */
+
+.col {
+    margin: 0;
+}

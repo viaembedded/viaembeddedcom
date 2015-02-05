@@ -576,21 +576,21 @@ get_header(); ?>
       <li>
 	<label for="AppType">You are developing for this kind of application<em>*</em></label><br>
 	<p>
-	  <input value="1" type="checkbox" name="AppType" id="AppType1" data-parsley-mincheck="1" data-parsley-error-message="Please select at least 1" data-parsley-trigger="change" required><label for="AppType1">Digital Signage</label>
-	  <nobr><input value="2" type="checkbox" name="AppType" id="AppType2"><label for="AppType2">Thin Client</label></nobr>
-	  <nobr><input value="4" type="checkbox" name="AppType" id="AppType4"><label for="AppType4">Network Application</label></nobr>
-          <nobr><input value="6" type="checkbox" name="AppType" id="AppType6"><label for="AppType6">POS</label></nobr>
-          <nobr><input value="9" type="checkbox" name="AppType" id="AppType9"><label for="AppType9">Arcade Game (Gaming)</label></nobr>
-          <nobr><input value="10" type="checkbox" name="AppType" id="AppType10"><label for="AppType10">Medical</label></nobr>
-          <nobr><input value="7" type="checkbox" name="AppType" id="AppType7"><label for="AppType7">Kiosk</label></nobr>
-          <nobr><input value="12" type="checkbox" name="AppType" id="AppType12"><label for="AppType12">Automation</label></nobr>
-          <nobr><input value="13" type="checkbox" name="AppType" id="AppType13"><label for="AppType13">Transportation</label></nobr>
-          <nobr><input value="14" type="checkbox" name="AppType" id="AppType14"><label for="AppType14">ATM</label></nobr>
-          <nobr><input value="15" type="checkbox" name="AppType" id="AppType15"><label for="AppType15">NVR/Surveillance</label></nobr>
-          <nobr><input value="16" type="checkbox" name="AppType" id="AppType16"><label for="AppType16">Healthcare</label></nobr>
-          <nobr><input value="17" type="checkbox" name="AppType" id="AppType17"><label for="AppType17">Video Wall</label></nobr>
-          <nobr><input value="18" type="checkbox" name="AppType" id="AppType18"><label for="AppType18">In-vehicle entertainment</label></nobr><br>
-          <nobr><input value="11" type="checkbox" name="AppType" id="AppTypeOther"><label for="AppTypeOther">Other:</label>
+	  <input value="1" type="checkbox" name="AppType[]" id="AppType1" data-parsley-mincheck="1" data-parsley-error-message="Please select at least 1" data-parsley-trigger="change" required><label for="AppType1">Digital Signage</label>
+	  <nobr><input value="2" type="checkbox" name="AppType[]" id="AppType2"><label for="AppType2">Thin Client</label></nobr>
+	  <nobr><input value="4" type="checkbox" name="AppType[]" id="AppType4"><label for="AppType4">Network Application</label></nobr>
+          <nobr><input value="6" type="checkbox" name="AppType[]" id="AppType6"><label for="AppType6">POS</label></nobr>
+          <nobr><input value="9" type="checkbox" name="AppType[]" id="AppType9"><label for="AppType9">Arcade Game (Gaming)</label></nobr>
+          <nobr><input value="10" type="checkbox" name="AppType[]" id="AppType10"><label for="AppType10">Medical</label></nobr>
+          <nobr><input value="7" type="checkbox" name="AppType[]" id="AppType7"><label for="AppType7">Kiosk</label></nobr>
+          <nobr><input value="12" type="checkbox" name="AppType[]" id="AppType12"><label for="AppType12">Automation</label></nobr>
+          <nobr><input value="13" type="checkbox" name="AppType[]" id="AppType13"><label for="AppType13">Transportation</label></nobr>
+          <nobr><input value="14" type="checkbox" name="AppType[]" id="AppType14"><label for="AppType14">ATM</label></nobr>
+          <nobr><input value="15" type="checkbox" name="AppType[]" id="AppType15"><label for="AppType15">NVR/Surveillance</label></nobr>
+          <nobr><input value="16" type="checkbox" name="AppType[]" id="AppType16"><label for="AppType16">Healthcare</label></nobr>
+          <nobr><input value="17" type="checkbox" name="AppType[]" id="AppType17"><label for="AppType17">Video Wall</label></nobr>
+          <nobr><input value="18" type="checkbox" name="AppType[]" id="AppType18"><label for="AppType18">In-vehicle entertainment</label></nobr><br>
+          <nobr><input value="11" type="checkbox" name="AppType[]" id="AppTypeOther"><label for="AppTypeOther">Other:</label>
 	    <input id="AppType_text11" name="AppType_text11" value="" data-parsley-conditionalchecked='AppTypeOther' data-parsley-validate-if-empty data-parsley-success-class="" data-parsley-conditionalchecked-message='Please specify if you selected "Other"!'></nobr>
 	</p>
       </li>

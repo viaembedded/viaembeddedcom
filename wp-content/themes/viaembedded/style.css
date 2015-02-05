@@ -607,15 +607,42 @@ a.nodecorate {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
+@media screen and (max-width: 767px) {
+	/* .menu-toggle, */
+	/* .main-navigation.toggled .nav-menu { */
+	/* 	display: block; */
+	/* } */
 
-	.main-navigation ul {
-		display: none;
-	}
+	/* .main-navigation ul { */
+	/* 	display: none; */
+    /* } */
+
+
+    nav#site-navigation {
+	display: block;
+	clear: both;
+	width: 100%;
+    }
+
+    div#breadcrumbs-outer {
+	display: none;
+    }
+
+    /* Here `!important` is a hack, need to figure out proper priorities */
+    body.page-template-default article.page.has-featured-image header.entry-header > img {
+	display: none !important;
+    }
+    body.page-template-default article.page.has-featured-image header.entry-header .entry-title {
+	position: relative !important;
+	top: inherit !important;
+	transform: initial !important;
+	max-width: inherit !important;
+    }
+
+    div#content-row,
+    header.entry-header {
+	clear: both;
+    }
 }
 
 .site-main .comment-navigation,
@@ -1199,6 +1226,20 @@ table.t-c1-fixwidth .column-1{
     width: 200px;
 }
 
+@media only screen and (max-width: 797px) {
+
+    table.t-c1-fixwidth .column-1{
+	width: initial;
+    }
+
+    table.t-ordering .column-1,
+    table.t-ordering .column-2 {
+	width: initial;
+    }
+}
+
+}
+
 /*--------------------------------------------------------------
 13.0 Specific pages
 --------------------------------------------------------------*/
@@ -1333,25 +1374,17 @@ table#frontpaget1 {
     }
 
     #site-navigation-outer {
-	clear: none;
-	float: none;
-	padding-top: 5px;
-	position: relative;
-	height: 50px;
-	width: 100%
+    	clear: none;
+    	float: none;
+    	padding-top: 5px;
+    	position: relative;
+    	height: 50px;
+    	width: 100%
     }
     #site-navigation {
-	width: 100%;
+    	width: 100%;
     }
 
-}
-
-@media (max-width: 767px) {
-
-    #banner-left,
-    #banner-right {
-	display: none;
-    }
 }
 
 /*--------------------------------------------------------------
@@ -1576,7 +1609,7 @@ textarea.parsley-error {
 
 /*  GO FULL WIDTH AT LESS THAN 790 PIXELS */
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 797px) {
     .col {
 	margin: 1% 0 1% 0%;
     }
@@ -1585,7 +1618,7 @@ textarea.parsley-error {
     }
 }
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 797px) {
     .span_2_of_2, .span_1_of_2 {
 	width: 100%;
     }

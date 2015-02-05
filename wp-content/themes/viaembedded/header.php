@@ -45,7 +45,11 @@ endif;?>
 	    <nav id="site-navigation" class="main-navigation" role="navigation">
 	      <h1 class="menu-toggle"><?php _e( 'Menu', 'fwu' ); ?></h1>
 	      <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'fwu' ); ?>"><?php _e( 'Skip to content', 'fwu' ); ?></a></div>
-	      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+<?php
+if( function_exists( 'uberMenu_direct' ) ){
+  uberMenu_direct( 'primary' );
+}
+?>
 	    </nav><!-- #site-navigation -->
 	  </div><!-- #site-navigation-outer -->
 	  <?php do_action( 'before' ); ?>

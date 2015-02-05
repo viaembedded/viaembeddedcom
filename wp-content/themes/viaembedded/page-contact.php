@@ -642,6 +642,7 @@ get_header(); ?>
   <input name="button" type="submit" class="" id="submit" value="Submit">
 </form>
 
+<div id="response" style="display: none;"></div>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;<br>

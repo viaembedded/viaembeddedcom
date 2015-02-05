@@ -1627,3 +1627,14 @@ textarea.parsley-error {
 	width: 100%;
     }
 }
+
+/*--------------------------------------------------------------
+??.? Contact form
+--------------------------------------------------------------*/
+
+div#response {
+    padding: 15px 15px 15px 15px;
+    background: lightgray;
+    margin-top: 15px;
+    font-weight: bold;
+}

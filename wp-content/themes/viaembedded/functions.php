@@ -143,7 +143,7 @@ function viaembedded_scripts() {
 
 	wp_register_script( 'viaembedded-jquery-slides', get_template_directory_uri() . '/js/lib/jquery.slides.min.js', array('jquery'), null, true );
 	wp_register_script( 'viaembedded-parsley', get_template_directory_uri() . '/js/lib/parsley.min.js', array('jquery'), null, true );
-
+	wp_register_script( 'viaembedded-jquery-serialize', get_template_directory_uri() . '/js/lib/jquery.serialize-object.js', array('jquery'), null, true );
 
 
 	wp_enqueue_script( 'viaembedded-slider', get_template_directory_uri() . '/js/slider.js', array('viaembedded-jquery-slides'), null, true );
@@ -157,7 +157,7 @@ function viaembedded_scripts() {
 	// Contact page
 	// This does not work somehow: if ( is_page_template( 'page-contact.php' ) ) {
 	if ( strcmp(  basename(get_page_template()), 'page-contact.php' ) == 0 ) {
-	  wp_enqueue_script( 'viaembedded-contact', get_template_directory_uri() . '/js/contact.js', array('viaembedded-parsley'), null, true );
+	  wp_enqueue_script( 'viaembedded-contact', get_template_directory_uri() . '/js/contact.js', array('viaembedded-parsley', 'viaembedded-jquery-serialize'), null, true );
 	}
 
 }

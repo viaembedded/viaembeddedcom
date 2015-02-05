@@ -111,9 +111,9 @@ VIA Embedded Contact Form
             conditionalrequired: {
                 fn: function (value, requirements) {
                     // if requirements[0] value does not meet requirements[1] expectation, field is required
-                    if (requirements[1] === $(requirements[0]).val() && '' === value)
+                    if (requirements[1] === $(requirements[0]).val() && '' === value) {
                         return false;
-                    
+                    }
                     return true;
                 },
                 priority: 32
@@ -123,15 +123,14 @@ VIA Embedded Contact Form
                     // if requirements[0] value does not meet requirements[1] expectation, field is required
                     if ($('#' + checkboxId + ':checked').length > 0 && '' === value) {
                         return false;
-                    } else {
-                        return true;
                     }
+                    return true;
                 },
                 priority: 33
             }
         }
     };
-    
+
     $(document).ready(function () {
 
         // Visibility of States, Provinces
@@ -173,50 +172,59 @@ VIA Embedded Contact Form
             });
         });
 
+        var sendMail = function () {
+
+            var log = function (obj) {
+                $('#response').show();
+                $('#response').text(JSON.stringify(obj));
+            },
+                emailText = JSON.stringify($("#contactForm").serializeObject(), null, " ");
+
+            $.ajax({
+                type: "POST",
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                data: {
+                    'key': '82SOghIRdEq6Y8F-3YIt-Q',
+                    'message': {
+                        'from_email': 'embedded@via.com.tw',
+                        'from_name': "VIA Contact Form",
+                        'subject': 'VIA Embedded Contact Form',
+                        'text': emailText,
+                        'to': [
+                            {
+                                'email': 'embedded@via.com.tw',
+                                'name': 'VIA Embedded',
+                                'type': 'to'
+                            }]
+                    }
+                }
+            }).done(function (response) {
+                log("Your message has been sent, thank you!");
+                console.log(response);
+            }).fail(function (response) {
+                log("Looks like something went wrong with the form submission. Please try again later, or use the contact button at the bottom of the page! Sorry about the inconvenience!");
+                console.log(response);
+            });
+
+        };
+
         $('#contactForm').parsley().subscribe('parsley:form:validate', function (formInstance) {
 
             if (formInstance.isValid()) {
-                alert("Yay, a valid form!");
+                sendMail(formInstance);
             }
             formInstance.submitEvent.preventDefault();
-            return;
-            // // if one of these blocks is not failing do not prevent submission
-            // // we use here group validation with option force (validate even non required fields)
-            // if (formInstance.isValid('block1', true) || formInstance.isValid('block2', true)) {
-            //     $('.invalid-form-error-message').html('');
-            //     return;
-            // }
-            // // else stop form submission
-            // formInstance.submitEvent.preventDefault();
-            
-            // // and display a gentle message
-            // $('.invalid-form-error-message')
-            //     .html("You must correctly fill the fields of at least one of these two blocks!")
-            //     .addClass("filled");
-            // return;
+            return false;
+
         });
-        
+
         // Validation
         $('#submit').click(function () {
 
             // Fix button remain pressed
             // See: http://stackoverflow.com/questions/3861307/jqueryui-button-remains-pressed-after-opening-ui-dialog-with-it-in-firefox
             $(this).removeClass("ui-state-focus ui-state-hover");
-            
-            // var firstName = $('#firstName');
-            // if ($.trim(firstName.val()).length < 1) {
-            //     $('body').scrollTop(firstName.offset().top);
-            //     alert("Please fill in your first name!");
-            //     return;
-            // }
 
-            // var lastName = $('#lastName');
-            // if ($.trim(firstName.val()).length < 1) {
-            //     $('body').scrollTop(firstName.offset().top);
-            //     alert("Please fill in your last name!");
-            //     return;
-            // }
-            
         });
     });
 

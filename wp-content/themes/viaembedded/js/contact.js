@@ -186,8 +186,8 @@ VIA Embedded Contact Form
                 data: {
                     'key': '82SOghIRdEq6Y8F-3YIt-Q',
                     'message': {
-                        'from_email': 'embedded@via.com.tw',
-                        'from_name': "VIA Contact Form",
+                        'from_email': $("input[name=email]").val(),
+                        'from_name': $("input[name=firstName]").val() + ' ' +  $("input[name=lastName]").val(),
                         'subject': 'VIA Embedded Contact Form',
                         'text': emailText,
                         'to': [

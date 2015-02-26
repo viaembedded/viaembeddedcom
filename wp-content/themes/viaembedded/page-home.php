@@ -10,55 +10,61 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', 'page' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
+		<?php get_template_part( 'content', 'page' ); ?>
 
 <div class="frontpage latest section group">
-	<div class="col span_1_of_2">
-         <h2>Latest in Perspectives</h2>
 <?php
-	$args = array( 'numberposts' => 1,
-		       'offset' => 0,
-		       'category' => 13,
-		       'orderby' => 'post_date',
-		       'order' => 'DESC',
-		       'post_type' => 'post',
-		       'post_status' => 'publish',
-		       'meta_key' => '_thumbnail_id'
-		       );
-	$recent_posts = wp_get_recent_posts( $args );
-	foreach( $recent_posts as $recent ) {
-	  echo '<a href="'. get_permalink($recent["ID"]) .'">'. get_the_post_thumbnail($recent["ID"], "frontpage") .'</a>';
-	  echo '<h3><a href="'. get_permalink($recent["ID"]) .'">'. $recent["post_title"].'</a></h3>';
-	  echo '<p>'. $recent["post_excerpt"] .'</p>';
-	}
-?>
-	</div>
+	wp_reset_query();
 
-	<div class="col span_1_of_2">
-         <h2>Latest in Announcements</h2>
+	$category = 13; /* Perspectives */
+
+	$args = array(
+		'posts_per_page'   => 1,
+		'offset'           => 0,
+		'category'         => $category,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'post_status'      => 'publish',
+		);
+	$category_posts = get_posts( $args );
+
+	set_query_var( 'category', $category );
+	foreach ( $category_posts as $post ) : setup_postdata( $post ); ?>
+	<div class="stream col span_1_of_2">
+	  <?php get_template_part( 'content', 'stream' ); ?>
+	</div><!-- .stream >
+	<?php endforeach;
+	wp_reset_postdata();
+	wp_reset_query();
+	?>
+</div><!-- .frontpage.latest -->
+
 <?php
-	$args = array( 'numberposts' => 1,
-		       'offset' => 0,
-		       'category' => 15,
-		       'orderby' => 'post_date',
-		       'order' => 'DESC',
-		       'post_type' => 'post',
-		       'post_status' => 'publish'
-		       );
-	$recent_posts = wp_get_recent_posts( $args );
-	foreach( $recent_posts as $recent ) {
-	  echo '<a href="'. get_permalink($recent["ID"]) .'">'. get_the_post_thumbnail($recent["ID"], "frontpage") .'</a>';
-	  echo '<h3><a href="'. get_permalink($recent["ID"]) .'">'. $recent["post_title"].'</a></h3>';
-	  echo '<p>'. $recent["post_excerpt"] .'</p>';
-	}
-?>
-	</div>
-</div>
-  
+	wp_reset_query();
+
+	$category = 15; /* Announcements */
+
+	$args = array(
+		'posts_per_page'   => 1,
+		'offset'           => 0,
+		'category'         => $category,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'post_status'      => 'publish',
+		);
+	$category_posts = get_posts( $args );
+
+	set_query_var( 'category', $category );
+	foreach ( $category_posts as $post ) : setup_postdata( $post ); ?>
+	<div class="stream col span_1_of_2">
+	  <?php get_template_part( 'content', 'stream' ); ?>
+	</div><!-- .stream >
+	<?php endforeach;
+	wp_reset_postdata();
+	wp_reset_query();
+	?>
+</div><!-- .frontpage.latest -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

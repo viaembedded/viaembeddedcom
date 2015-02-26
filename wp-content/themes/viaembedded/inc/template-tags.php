@@ -103,13 +103,13 @@ function viaembedded_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'viaembedded' ) );
 		if ( is_single() && $categories_list && viaembedded_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'viaembedded' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'viaembedded' ) . '</span><br>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'viaembedded' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'viaembedded' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'viaembedded' ) . '</span><br>', $tags_list );
 		}
 	}
 

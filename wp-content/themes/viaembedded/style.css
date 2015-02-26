@@ -815,6 +815,7 @@ a.nodecorate {
 
 .entry-meta {
     padding-bottom: 0.25em;
+    font-weight: bold;
 }
 
 article.category-press .entry-title {

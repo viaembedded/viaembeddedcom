@@ -36,7 +36,7 @@
 				<div>
 					<strong>Europe</strong><br>
 					<a href="tel:+49-228-688565-0">+49-228-688565-0</a><br>
-					<a href="mailto:embedded@viatech.eu">embedded@viatech.eu</a>
+					<a href="mailto:embedded@via-tech.eu">embedded@via-tech.eu</a>
 				</div>
 				<div>
 					<strong>Rest of the World</strong><br>

@@ -906,6 +906,11 @@ span.tags-links {
     font-style: italic;
 }
 
+div.entry-content iframe {
+    display: block;
+    margin: 0 auto;
+}
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/

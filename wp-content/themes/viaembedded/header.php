@@ -53,7 +53,7 @@ if( function_exists( 'uberMenu_direct' ) ){
 	    </nav><!-- #site-navigation -->
 	  </div><!-- #site-navigation-outer -->
 	  <?php do_action( 'before' ); ?>
-	  <header id="masthead" class="inner">
+	  <header id="masthead" class="inner clearfix">
             <?php if ( function_exists('yoast_breadcrumb') ) {
 			echo "<div id=\"breadcrumbs-outer\">";
 			  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
@@ -61,6 +61,9 @@ if( function_exists( 'uberMenu_direct' ) ){
 		} ?>
 	    <div id="search-outer">
 	    <?php get_search_form(); ?>
+	    </div>
+	    <div id="language-switcher">
+	       <ul><?php pll_the_languages(array('show_flags'=>1,'show_names'=>0));?></ul>
 	    </div>
 	   </header><!-- #masthead -->
 	</div><!-- .main -->

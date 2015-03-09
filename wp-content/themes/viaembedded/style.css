@@ -74,6 +74,11 @@ and Blueprint http://www.blueprintcss.org/
 	padding: 1em 0;
 }
 
+.clearfix {
+    display: inline-block;
+    width: 100%;
+}
+
 * { /* keep all site elements their true width. Ex. padding gets subtracted from width */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1370,6 +1375,27 @@ table#frontpaget1 {
     display: block;
     position: relative;
     z-index: 10;
+}
+
+header#masthead {
+    padding: 0.5em 0 0 0;
+}
+
+/* Language switcher */
+
+div#language-switcher {
+    float: left;
+    clear: left;
+}
+
+div#language-switcher ul {
+    margin: 0;
+}
+
+div#language-switcher ul li.lang-item {
+    display: inline;
+    list-style: none;
+    margin-right: 15px;
 }
 
 @media screen and (min-width: 768px) {

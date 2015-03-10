@@ -7,7 +7,14 @@
 ?>
 
 <?php $category_name = get_the_category_by_ID( $category ); ?>
-<h2 class="stream-title"><a href="<?php echo get_category_link( $category ); ?> ">Latest in <?php echo $category_name; ?></a></h2>
+<h2 class="stream-title">
+<a href="<?php echo get_category_link( $category ); ?>">
+<?php
+      /* translators: %s: Name of a post category */
+      printf( __( 'Latest in %s', 'viaembedded' ), $category_name );
+?>
+</a>
+</h2>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a href="<?php the_permalink(); ?>">
 	<?php if ( has_post_thumbnail() ) {

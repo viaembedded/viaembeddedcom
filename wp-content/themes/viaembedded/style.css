@@ -1317,7 +1317,8 @@ Slider
 13.2 Front Page
 --------------------------------------------------------------*/
 
-#post-350 > header > h1.entry-title {
+/* Hide title on the front page */
+.frontpage header > h1.entry-title {
     display: none;
 }
 

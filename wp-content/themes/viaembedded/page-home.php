@@ -16,7 +16,7 @@ get_header(); ?>
 <?php
 	wp_reset_query();
 
-	$category = 13; /* Perspectives */
+	$category = 13; /* Perspectives English */
 
 	$args = array(
 		'posts_per_page'   => 1,
@@ -25,6 +25,7 @@ get_header(); ?>
 		'orderby'          => 'post_date',
 		'order'            => 'DESC',
 		'post_status'      => 'publish',
+		'lang'		   => 'en',
 		);
 	$category_posts = get_posts( $args );
 
@@ -42,7 +43,7 @@ get_header(); ?>
 <?php
 	wp_reset_query();
 
-	$category = 15; /* Announcements */
+	$category = 15; /* Announcements English */
 
 	$args = array(
 		'posts_per_page'   => 1,
@@ -51,6 +52,7 @@ get_header(); ?>
 		'orderby'          => 'post_date',
 		'order'            => 'DESC',
 		'post_status'      => 'publish',
+		'lang'		   => 'en',
 		);
 	$category_posts = get_posts( $args );
 

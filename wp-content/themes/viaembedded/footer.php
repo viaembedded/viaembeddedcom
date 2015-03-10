@@ -15,19 +15,11 @@
 <div id="footer-row" class="full">
 	<div id="footer-banner" class="full">
 		<ul>
-		 <?php if($language == "zh-CN") { ?>
-	               <li><a href="/products-cn/">威盛产品</a></li>
-	               <li><a href="/solutions-cn/">解决方案</a></li>
-	               <li><a href="/services-cn/">威盛服务</a></li>
-	               <li><a href="/contact-cn/">联系我们</a></li>
-	               <li><a href="/store/">威盛商城</a></li>
-		 <?php } else { ?>
-	               <li><a href="/products/">Products</a></li>
-	               <li><a href="/solutions/">Solutions</a></li>
-	               <li><a href="/services/">Services</a></li>
-	               <li><a href="/contact/">Contact</a></li>
-	               <li><a href="/store/">Store</a></li>
-		 <?php }; ?>
+	               <li><a href="/products/"><?php /* translators: Footer header */ _e("Products", "viaembedded"); ?></a></li>
+	               <li><a href="/solutions/"><?php /* translators: Footer header */ _e("Solutions", "viaembedded"); ?></a></li>
+	               <li><a href="/services/"><?php /* translators: Footer header */ _e("Services", "viaembedded"); ?></a></li>
+	               <li><a href="/contact/"><?php /* translators: Footer header */ _e("Contact", "viaembedded"); ?></a></li>
+	               <li><a href="/store/"><?php /* translators: Footer header */ _e("Store", "viaembedded"); ?></a></li>
 		</ul>
 	</div>
 	<div class="main">
@@ -39,28 +31,28 @@
 			        <?php $language = get_bloginfo('language');
 				  if($language == "zh-CN") { ?>
 				<div>
-					<strong>中国</strong><br>
+					<strong><?php _e("China", "viaembedded"); ?></strong><br>
 					<a href="tel:400-818-5166">400-818-5166</a><br>
 					<a href="mailto:embedded@viatech.com.cn">embedded@viatech.com.cn</a>
 				</div>
 				<div>
-					<strong>其它国家和地区</strong><br>
+					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
 				</div>
 				<?php } else { ?>
 				<div>
-					<strong>Americas</strong><br>
+					<strong><?php _e("Americas", "viaembedded"); ?></strong><br>
 					<a href="tel:+1-510-687-4688">+1-510-687-4688</a><br>
 					<a href="mailto:embedded@viatech.com">embedded@viatech.com</a>
 				</div>
 				<div>
-					<strong>Europe</strong><br>
+					<strong><?php _e("Europe", "viaembedded"); ?></strong><br>
 					<a href="tel:+49-228-688565-0">+49-228-688565-0</a><br>
 					<a href="mailto:embedded@via-tech.eu">embedded@via-tech.eu</a>
 				</div>
 				<div>
-					<strong>Rest of the World</strong><br>
+					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
 				</div>

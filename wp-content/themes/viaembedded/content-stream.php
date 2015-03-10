@@ -2,7 +2,7 @@
 /**
  * The template used for displaying latest post on the frontpage (front-page.php).
  *
- * @package apoip
+ * @package viaembedded
  */
 ?>
 

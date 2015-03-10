@@ -7,7 +7,7 @@
  * @package VIA Embedded
  */
 ?>
-
+<?php $language = get_bloginfo('language'); ?>
 		</div><!-- #content -->
 	</div><!-- .main -->
 </div><!-- #content-row -->
@@ -15,11 +15,19 @@
 <div id="footer-row" class="full">
 	<div id="footer-banner" class="full">
 		<ul>
+		 <?php if($language == "zh-CN") { ?>
+	               <li><a href="/products-cn/">威盛产品</a></li>
+	               <li><a href="/solutions-cn/">解决方案</a></li>
+	               <li><a href="/services-cn/">威盛服务</a></li>
+	               <li><a href="/contact-cn/">联系我们</a></li>
+	               <li><a href="/store/">威盛商城</a></li>
+		 <?php } else { ?>
 	               <li><a href="/products/">Products</a></li>
 	               <li><a href="/solutions/">Solutions</a></li>
 	               <li><a href="/services/">Services</a></li>
 	               <li><a href="/contact/">Contact</a></li>
 	               <li><a href="/store/">Store</a></li>
+		 <?php }; ?>
 		</ul>
 	</div>
 	<div class="main">
@@ -28,8 +36,8 @@
 				<div id="footer-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/VIA_Embedded_Logo_small.png" width="249" height="48" alt="VIA Embedded Logo"></a>
 				</div>
-			        <?php $curlang = get_bloginfo('language');
-				  if($curlang == "zh-CN") { ?>
+			        <?php $language = get_bloginfo('language');
+				  if($language == "zh-CN") { ?>
 				<div>
 					<strong>中国</strong><br>
 					<a href="tel:400-818-5166">400-818-5166</a><br>

@@ -22,7 +22,7 @@
 	     } else {
               echo  '<img src="' . get_stylesheet_directory_uri() . '/images/' . $category_name . '.jpg">';
              }
-        ?> 
+        ?>
 	</a>
 
 	<?php the_title( sprintf( '<header class="stream-header"><h3 class="stream-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3></header>' ); ?>

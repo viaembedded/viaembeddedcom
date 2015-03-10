@@ -28,6 +28,19 @@
 				<div id="footer-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/VIA_Embedded_Logo_small.png" width="249" height="48" alt="VIA Embedded Logo"></a>
 				</div>
+			        <?php $curlang = get_bloginfo('language');
+				  if($curlang == "zh-CN") { ?>
+				<div>
+					<strong>中国</strong><br>
+					<a href="tel:400-818-5166">400-818-5166</a><br>
+					<a href="mailto:embedded@viatech.com.cn">embedded@viatech.com.cn</a>
+				</div>
+				<div>
+					<strong>其它国家和地区</strong><br>
+					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
+					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
+				</div>
+				<?php } else { ?>
 				<div>
 					<strong>Americas</strong><br>
 					<a href="tel:+1-510-687-4688">+1-510-687-4688</a><br>
@@ -43,6 +56,7 @@
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
 				</div>
+				<?php }; ?>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #main -->

@@ -32,7 +32,7 @@
 		<p><a class="more-link" href="<?php the_permalink(); ?>" rel="bookmark">
 			<?php
 				/* translators: %s: Name of page */
-				printf( 'Read more %s' , the_title( '<span class="screen-reader-text">', '</span>', false ) );
+				printf( __('Read more %s', 'viaembedded') , the_title( '<span class="screen-reader-text">', '</span>', false ) );
 			?>
 		</a></p>
 	</div><!-- .entry-summary -->

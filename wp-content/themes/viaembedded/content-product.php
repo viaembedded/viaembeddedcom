@@ -40,7 +40,7 @@
 	<?php $shop_link = get_post_meta( get_the_ID(), 'shop-link', true );
 	      if( ! empty( $shop_link ) ) {
 	      echo "<div id=\"shop-link\">
-<a class=\"fasc-button fasc-size-medium fasc-type-flat fasc-rounded-medium fasc-ico-before dashicons-cart\" style=\"background-color: #007AC2; color: #ffffff;\" href=\"$shop_link\" data-fasc-style=\"background-color:#007AC2;color:#ffffff;\">Order Sample</a>
+<a class=\"fasc-button fasc-size-medium fasc-type-flat fasc-rounded-medium fasc-ico-before dashicons-cart\" style=\"background-color: #007AC2; color: #ffffff;\" href=\"$shop_link\" data-fasc-style=\"background-color:#007AC2;color:#ffffff;\">" . __('Order Sample', 'viaembedded') . "</a>
 </div>";
 	      }
 	?>

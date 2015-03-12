@@ -892,6 +892,15 @@ h6 {
     font-weight: normal;
 }
 
+div.entry-content h1,
+div.entry-content h2,
+div.entry-content h3,
+div.entry-content h4,
+div.entry-content h5,
+div.entry-content h6 {
+    font-weight: bold;
+}
+
 h1 > a,
 h2 > a,
 h3 > a,

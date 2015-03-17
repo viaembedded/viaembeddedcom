@@ -19,7 +19,7 @@ get_header(); ?>
 	$category = 13; /* Perspectives English */
 
 	$args = array(
-		'posts_per_page'   => 1,
+		'posts_per_page'   => 2,
 		'offset'           => 0,
 		'category'         => $category,
 		'orderby'          => 'post_date',
@@ -29,16 +29,26 @@ get_header(); ?>
 		);
 	$category_posts = get_posts( $args );
 
+	$category_name = get_the_category_by_ID( $category ); ?>
+	<div class="stream col span_1_of_2">
+	<h2 class="stream-title">
+	<a href="<?php echo get_category_link( $category ); ?>">
+	<?php
+	      /* translators: %s: Name of a post category */
+	      printf( __( 'Latest in %s', 'viaembedded' ), $category_name );
+	?>
+	</a>
+	</h2>
+	<?php
 	set_query_var( 'category', $category );
 	foreach ( $category_posts as $post ) : setup_postdata( $post ); ?>
-	<div class="stream col span_1_of_2">
 	  <?php get_template_part( 'content', 'stream' ); ?>
+	<?php endforeach; ?>
 	</div><!-- .stream -->
-	<?php endforeach;
+	<?php
 	wp_reset_postdata();
 	wp_reset_query();
 	?>
-</div><!-- .frontpage.latest -->
 
 <?php
 	wp_reset_query();
@@ -46,7 +56,7 @@ get_header(); ?>
 	$category = 15; /* Announcements English */
 
 	$args = array(
-		'posts_per_page'   => 1,
+		'posts_per_page'   => 2,
 		'offset'           => 0,
 		'category'         => $category,
 		'orderby'          => 'post_date',
@@ -56,12 +66,23 @@ get_header(); ?>
 		);
 	$category_posts = get_posts( $args );
 
+	$category_name = get_the_category_by_ID( $category ); ?>
+	<div class="stream col span_1_of_2">
+	<h2 class="stream-title">
+	<a href="<?php echo get_category_link( $category ); ?>">
+	<?php
+	      /* translators: %s: Name of a post category */
+	      printf( __( 'Latest in %s', 'viaembedded' ), $category_name );
+	?>
+	</a>
+	</h2>
+	<?php
 	set_query_var( 'category', $category );
 	foreach ( $category_posts as $post ) : setup_postdata( $post ); ?>
-	<div class="stream col span_1_of_2">
 	  <?php get_template_part( 'content', 'stream' ); ?>
+	<?php endforeach; ?>
 	</div><!-- .stream -->
-	<?php endforeach;
+	<?php
 	wp_reset_postdata();
 	wp_reset_query();
 	?>

@@ -25,7 +25,6 @@ get_header(); ?>
 		'orderby'          => 'post_date',
 		'order'            => 'DESC',
 		'post_status'      => 'publish',
-		'lang'		   => 'en',
 		);
 	$category_posts = get_posts( $args );
 
@@ -62,7 +61,6 @@ get_header(); ?>
 		'orderby'          => 'post_date',
 		'order'            => 'DESC',
 		'post_status'      => 'publish',
-		'lang'		   => 'en',
 		);
 	$category_posts = get_posts( $args );
 

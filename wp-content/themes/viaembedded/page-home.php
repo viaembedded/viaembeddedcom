@@ -33,7 +33,7 @@ get_header(); ?>
 	foreach ( $category_posts as $post ) : setup_postdata( $post ); ?>
 	<div class="stream col span_1_of_2">
 	  <?php get_template_part( 'content', 'stream' ); ?>
-	</div><!-- .stream >
+	</div><!-- .stream -->
 	<?php endforeach;
 	wp_reset_postdata();
 	wp_reset_query();
@@ -60,7 +60,7 @@ get_header(); ?>
 	foreach ( $category_posts as $post ) : setup_postdata( $post ); ?>
 	<div class="stream col span_1_of_2">
 	  <?php get_template_part( 'content', 'stream' ); ?>
-	</div><!-- .stream >
+	</div><!-- .stream -->
 	<?php endforeach;
 	wp_reset_postdata();
 	wp_reset_query();

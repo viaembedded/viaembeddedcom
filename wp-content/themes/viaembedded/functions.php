@@ -142,7 +142,6 @@ function viaembedded_scripts() {
 	/* wp_enqueue_script( 'viaembedded-jquery', get_template_directory_uri() . '/js/lib/jquery.min.js', array(), null, true ); */
 
 	wp_register_script( 'viaembedded-jquery-slides', get_template_directory_uri() . '/js/lib/jquery.slides.min.js', array('jquery'), null, true );
-	wp_register_script( 'viaembedded-parsley', get_template_directory_uri() . '/js/lib/parsley.min.js', array('jquery'), null, true );
 	wp_register_script( 'viaembedded-jquery-serialize', get_template_directory_uri() . '/js/lib/jquery.serialize-object.js', array('jquery'), null, true );
 
 
@@ -152,12 +151,6 @@ function viaembedded_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
-
-	// Contact page
-	// This does not work somehow: if ( is_page_template( 'page-contact.php' ) ) {
-	if ( strcmp(  basename(get_page_template()), 'page-contact.php' ) == 0 ) {
-	  wp_enqueue_script( 'viaembedded-contact', get_template_directory_uri() . '/js/contact.js', array('viaembedded-parsley', 'viaembedded-jquery-serialize'), null, true );
 	}
 
 }

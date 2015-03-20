@@ -1298,6 +1298,7 @@ ul#product-highlights {
 
 #product-summary {
     display: table;
+    width: 100%;
 }
 
 #product-summary > div {

@@ -827,7 +827,8 @@ article.category-press .entry-title {
     font-size: 1.6em;
 }
 
-article.category-press span.byline {
+article.category-press span.byline,
+article.category-press-cn span.byline {
     display: none;
 }
 

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: viaembedded\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
 "POT-Creation-Date: 2015-03-12 04:01:12+00:00\n"
-"PO-Revision-Date: 2015-03-12 12:05+0800\n"
+"PO-Revision-Date: 2015-03-23 11:44+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: Chinese <gergelyimreh@via.com.tw>\n"
 "Language: zh-CN\n"
@@ -104,7 +104,7 @@ msgstr "了解更多 %s"
 #. translators: %s: Name of current post
 #: content.php:27
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "了解更多 %s <span class=\"meta-nav\">&rarr;</span>"
 
 #. translators: Footer header
 #: footer.php:18

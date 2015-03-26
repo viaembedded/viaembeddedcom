@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: viaembedded\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-03-12 04:01:12+00:00\n"
-"PO-Revision-Date: 2015-03-23 11:44+0800\n"
+"POT-Creation-Date: 2015-03-26 03:00:15+00:00\n"
+"PO-Revision-Date: 2015-03-26 11:02+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: Chinese <gergelyimreh@via.com.tw>\n"
 "Language: zh-CN\n"
@@ -91,20 +91,15 @@ msgstr ""
 msgid "Order Sample"
 msgstr "订购样品"
 
-#. translators: %s: Name of a post category
-#: content-stream.php:14
-msgid "Latest in %s"
-msgstr "最新%s"
-
 #. translators: %s: Name of page
-#: content-stream.php:35
+#: content-stream.php:26
 msgid "Read more %s"
 msgstr "了解更多 %s"
 
 #. translators: %s: Name of current post
 #: content.php:27
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "了解更多 %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "阅读全文 %s <span class=\"meta-nav\">&rarr;</span>"
 
 #. translators: Footer header
 #: footer.php:18
@@ -141,7 +136,7 @@ msgstr "其它国家和地区"
 
 #: footer.php:45
 msgid "Americas"
-msgstr ""
+msgstr "美洲"
 
 #: footer.php:50
 msgid "Europe"
@@ -181,7 +176,7 @@ msgstr ""
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
-msgstr ""
+msgstr "阅读导航"
 
 #: inc/template-tags.php:55
 msgctxt "Previous post link"
@@ -206,11 +201,11 @@ msgstr ""
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:104 inc/template-tags.php:110
 msgid ", "
-msgstr ""
+msgstr "，"
 
 #: inc/template-tags.php:106
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "类别："
 
 #: inc/template-tags.php:112
 msgid "Tagged %1$s"
@@ -325,13 +320,18 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
+#. translators: %s: Name of a post category
+#: page-home-cn.php:37 page-home-cn.php:73 page-home.php:37 page-home.php:73
+msgid "Latest in %s"
+msgstr "最新%s"
+
 #: search.php:16
 msgid "Search Results for: %s"
 msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "VIA Embedded"
-msgstr ""
+msgstr "威盛嵌入式"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/viaembedded/viaembeddedcom"

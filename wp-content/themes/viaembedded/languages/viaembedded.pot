@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VIA Embedded 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-03-12 04:01:12+00:00\n"
+"POT-Creation-Date: 2015-03-26 03:00:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,13 +88,8 @@ msgstr ""
 msgid "Order Sample"
 msgstr ""
 
-#. translators: %s: Name of a post category
-#: content-stream.php:14
-msgid "Latest in %s"
-msgstr ""
-
 #. translators: %s: Name of page
-#: content-stream.php:35
+#: content-stream.php:26
 msgid "Read more %s"
 msgstr ""
 
@@ -320,6 +315,11 @@ msgstr ""
 
 #: inc/template-tags.php:175
 msgid "Archives"
+msgstr ""
+
+#. translators: %s: Name of a post category
+#: page-home-cn.php:37 page-home-cn.php:73 page-home.php:37 page-home.php:73
+msgid "Latest in %s"
 msgstr ""
 
 #: search.php:16

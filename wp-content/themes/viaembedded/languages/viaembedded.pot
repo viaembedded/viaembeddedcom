@@ -331,7 +331,7 @@ msgid "VIA Embedded"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "https://github.com/viaembedded/viaembeddedcom"
 msgstr ""
 
 #. Description of the plugin/theme

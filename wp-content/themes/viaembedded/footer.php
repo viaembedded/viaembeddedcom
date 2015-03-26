@@ -7,7 +7,7 @@
  * @package VIA Embedded
  */
 ?>
-<?php $language = get_bloginfo('language'); ?>
+<?php $language = pll_current_language('slug'); ?>
 		</div><!-- #content -->
 	</div><!-- .main -->
 </div><!-- #content-row -->
@@ -15,10 +15,10 @@
 <div id="footer-row" class="full">
 	<div id="footer-banner" class="full">
 		<ul>
-	               <li><a href="/products/"><?php /* translators: Footer header */ _e("Products", "viaembedded"); ?></a></li>
-	               <li><a href="/solutions/"><?php /* translators: Footer header */ _e("Solutions", "viaembedded"); ?></a></li>
-	               <li><a href="/services/"><?php /* translators: Footer header */ _e("Services", "viaembedded"); ?></a></li>
-	               <li><a href="/contact/"><?php /* translators: Footer header */ _e("Contact", "viaembedded"); ?></a></li>
+	               <li><a href="<?php $tr_id = pll_get_post(12, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Products", "viaembedded"); ?></a></li>
+	               <li><a href="<?php $tr_id = pll_get_post(34, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Solutions", "viaembedded"); ?></a></li>
+	               <li><a href="<?php $tr_id = pll_get_post(35, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Services", "viaembedded"); ?></a></li>
+	               <li><a href="<?php $tr_id = pll_get_post(1076, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Contact", "viaembedded"); ?></a></li>
 	               <li><a href="/store/"><?php /* translators: Footer header */ _e("Store", "viaembedded"); ?></a></li>
 		</ul>
 	</div>
@@ -28,8 +28,7 @@
 				<div id="footer-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/VIA_Embedded_Logo_small.png" width="249" height="48" alt="VIA Embedded Logo"></a>
 				</div>
-			        <?php $language = get_bloginfo('language');
-				  if($language == "zh-CN") { ?>
+			        <?php if($language == "cn") { ?>
 				<div>
 					<strong><?php _e("China", "viaembedded"); ?></strong><br>
 					<a href="tel:400-818-5166">400-818-5166</a><br>

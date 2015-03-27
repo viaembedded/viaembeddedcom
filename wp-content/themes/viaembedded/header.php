@@ -62,7 +62,10 @@ if( function_exists( 'uberMenu_direct' ) ){
 	    <div id="search-outer">
 	    <?php get_search_form(); ?>
 	    </div>
-	   </header><!-- #masthead -->
+	    <div id="language-switcher">
+	      <ul><?php pll_the_languages(array('show_flags'=>1,'show_names'=>0));?></ul>
+	    </div>
+	  </header><!-- #masthead -->
 	</div><!-- .main -->
 </div><!-- #header-row -->
 

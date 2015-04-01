@@ -33,5 +33,16 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<script>
+ $("document").ready( function()  {
+//   var tabs = {};
+//   $('.responsive-tabs__list').children('li').each(function(index) { tabs[ $(this).text() ] = '#'+$(this).attr('id'); } )
+//   console.log(tabs);
+//   var anchor = escape(window.location.hash);
+//   if (tabs[anchor]) { $(tabs[x]).click(); };
+     setTimeout(function() { jQueryWP(window.location.hash).click(); }, 1000);
+ });
+</script>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

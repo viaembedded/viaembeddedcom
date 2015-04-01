@@ -179,6 +179,29 @@ function enable_more_buttons($buttons) {
 add_filter('mce_buttons_2', 'enable_more_buttons');
 
 /**
+ * Shortcodes
+ */
+//[pagelink id= text=]
+function pagelink_func( $atts ){
+	$a = shortcode_atts( array(
+	        'id' => 0,
+		'text' => '',
+        ), $atts );
+	if ($a['id'] == 0) {
+	   return('');
+	}
+
+	$language = pll_current_language('slug');
+	$tr_id = pll_get_post($a['id'], $language);
+	$href = get_page_link($tr_id);
+
+	$link =  '<a href="' . $href . '" class="pagelink">' . $a['text'] . '</a>';
+
+	return($link);
+}
+add_shortcode( 'pagelink', 'pagelink_func' );
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';

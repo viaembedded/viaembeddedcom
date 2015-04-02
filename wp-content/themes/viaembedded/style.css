@@ -1218,6 +1218,11 @@ table.t-downloads .column-3 {
     width: 170px;
 }
 
+table.t-downloads tr td[colspan],
+table.t-downloads tr td[colspan]:hover {
+    background-color: #E3E3E3;
+}
+
 /* Ordering info table */
 table.t-ordering .column-1,
 table.t-ordering .column-2 {

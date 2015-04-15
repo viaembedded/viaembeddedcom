@@ -70,6 +70,19 @@ time.updated {
     display: none;
 }
 
+/* UberMenu header overlay fix
+ http://sevenspark.com/diagnosis/z-index-submenu-hidden-behind-content?term_ref=876
+ http://caffeineoncode.com/2010/07/the-internet-explorer-z-index-bug/ 
+*/
+div#header-row {
+    position: relative;
+    z-index: 50;
+}
+
+div#content-row {
+    position: relative;
+    z-index: 30;
+}
 
 /*--------------------------------------------------------------
  Tabby

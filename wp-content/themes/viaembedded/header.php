@@ -18,9 +18,6 @@
     }
     add_action( 'wp_head', 'theme_slug_render_title' );
 endif;?>
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/lib/html5shiv.js"></script>
-<![endif]-->
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 

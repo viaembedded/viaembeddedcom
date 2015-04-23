@@ -1,6 +1,7 @@
 jQueryWP( document ).ready( function() {
     jQueryWP( "#accordion" ).accordion({
-	heightStyle: "content"
+	heightStyle: "content",
+	collapsible: true
     });
 })
 

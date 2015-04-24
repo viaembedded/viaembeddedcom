@@ -32,7 +32,7 @@ endif;?>
   <header class="main">
     <div class="banner-section" id="banner-center">
       <div id="banner-logo-outer">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="Home">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 	  <img src="<?php echo get_template_directory_uri(); ?>/images/VIA_Embedded_Logo.png" id="banner-logo">
 	</a>
       </div>

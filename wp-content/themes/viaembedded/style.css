@@ -1313,6 +1313,10 @@ ul#product-highlights {
     float: none;
 }
 
+div#accordion {
+    font-size: inherit;
+}
+
 span#license-header {
     font-weight: bold;
 }

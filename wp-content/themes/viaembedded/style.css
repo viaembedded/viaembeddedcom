@@ -1313,6 +1313,10 @@ ul#product-highlights {
     float: none;
 }
 
+span#license-header {
+    font-weight: bold;
+}
+
 @media (max-width: 899px) {
 
     #product-summary > div {

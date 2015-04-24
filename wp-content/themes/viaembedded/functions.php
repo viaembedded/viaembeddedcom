@@ -185,6 +185,16 @@ function enable_more_buttons($buttons) {
 }
 add_filter('mce_buttons_2', 'enable_more_buttons');
 
+// Add lincense shortcode
+function license_shortcode() {
+	 $language = pll_current_language('slug');
+	 $license_page_id = 3539;
+	 $tr_id = pll_get_post($license_page_id, $language);
+	 $link_text = '<span class="license"><span id="license-header">Important</span>: By downloading these software packages, you indicate your acceptance of the <a href="' . get_page_link($tr_id) . '">VIA Software License agreement</a>. If you do not agree with any of the terms and conditions, do not continue to download the software.</span>';
+	 return $link_text;
+}
+add_shortcode('license', 'license_shortcode');
+
 /**
  * Implement the Custom Header feature.
  */

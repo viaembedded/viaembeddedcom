@@ -1705,6 +1705,10 @@ div#response {
 ??.? Mailing list sign-up
 --------------------------------------------------------------*/
 
+div#mc_embed_signup {
+    padding-bottom: 1.5em;
+}
+
 .mc-field-group.input-group ul li {
     list-style: none;
     display: inline;

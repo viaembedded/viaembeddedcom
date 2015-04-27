@@ -156,6 +156,8 @@ function viaembedded_scripts() {
 	wp_enqueue_script( 'viaembedded-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'viaembedded-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_register_script( 'bsplist-selector', get_template_directory_uri(). '/js/bsplist.js', array('jquery'), null );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -194,6 +196,32 @@ function license_shortcode() {
 	 return $link_text;
 }
 add_shortcode('license', 'license_shortcode');
+
+// Add BSP update signup mailing list shortcode
+// [bsplist product="VAB-600"]
+function bsp_maillist_shortcode( $atts ) {
+	$a = shortcode_atts( array(
+        'product' => null,
+    ), $atts );
+
+	// Load customizer script if product target is set
+	if ($a['product']) {
+		$data_array = array(
+			'target' => $a['product'],
+		);
+		wp_localize_script( 'bsplist-selector', 'maillist', $data_array );
+		wp_enqueue_script( 'bsplist-selector' );
+	}
+
+	// Load basic mailling list signup code
+	ob_start();
+    get_template_part('partials/mailchimp', 'form');
+    $form = ob_get_contents();
+    ob_end_clean();
+    return $form;
+}
+add_shortcode('bsplist', 'bsp_maillist_shortcode');
+
 
 /**
  * Implement the Custom Header feature.

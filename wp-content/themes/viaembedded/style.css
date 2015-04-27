@@ -1705,8 +1705,15 @@ div#response {
 ??.? Mailing list sign-up
 --------------------------------------------------------------*/
 
-.mc-field-group.input-group label {
-    padding: 0 10px 0 5px;
+.mc-field-group.input-group ul li {
+    list-style: none;
+    display: inline;
+    white-space: nowrap;
+    padding-right: 15px;
+}
+
+label[for=mce-EMAIL] {
+    font-weight: bold;
 }
 
 /* From: http://cdn-images.mailchimp.com/embedcode/classic-081711.css */

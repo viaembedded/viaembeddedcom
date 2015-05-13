@@ -5,38 +5,38 @@ msgstr ""
 "Project-Id-Version: viaembedded\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
 "POT-Creation-Date: 2015-03-26 03:00:15+00:00\n"
-"PO-Revision-Date: 2015-03-27 11:29+0800\n"
+"PO-Revision-Date: 2015-05-12 11:01+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: Chinese <gergelyimreh@via.com.tw>\n"
-"Language: zh-CN\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.5\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "报告大人，未找到该页面！"
 
 #: 404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
+msgstr "请尝试点击上方导航栏或搜索关键词！该页面可能不存在或正在维护中。"
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "点击最多"
 
 #. translators: %1$s: smiley
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "按月份查看站内文章 %1$s"
 
 #: archive.php:35
 msgid "Subcategories"
-msgstr ""
+msgstr "年份"
 
 #: comments.php:28
 msgctxt "comments title"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "没有相关项"
 
 #: content-none.php:19
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "很抱歉，没有为您找到相关项，请您尝试其它关键词！"
 
 #: content-none.php:28
 msgid ""
@@ -168,11 +168,11 @@ msgstr ""
 
 #: inc/template-tags.php:25
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> 前一篇"
 
 #: inc/template-tags.php:29
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "后一篇 <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
@@ -191,12 +191,12 @@ msgstr ""
 #: inc/template-tags.php:82
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "发布日期：%s"
 
 #: inc/template-tags.php:87
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "作者：%s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:104 inc/template-tags.php:110
@@ -327,7 +327,7 @@ msgstr "最新%s"
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "%s的搜索结果"
 
 #. Theme Name of the plugin/theme
 msgid "VIA Embedded"

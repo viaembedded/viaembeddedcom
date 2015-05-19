@@ -1217,6 +1217,11 @@ h2.tablepress-table-name {
     font-size: x-large;
 }
 
+table.t-headers tr td[colspan],
+table.t-headers tr td[colspan]:hover {
+    background-color: #E3E3E3;
+}
+
 /* Downloads table */
 table.t-downloads {
     margin-bottom: 10px;

@@ -1182,10 +1182,11 @@ table.tablepress {
     width: 95%;
     margin: 0 auto 1em auto;
     font: 14px/19px "Open Sans", "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    border: none;
 }
 
-table.tablepress {
-    border: none;
+table.tablepress.centered td {
+    text-align: center;
 }
 
 table.tablepress thead th {

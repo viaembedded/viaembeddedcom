@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: viaembedded\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-03-26 03:00:15+00:00\n"
-"PO-Revision-Date: 2015-05-12 11:01+0800\n"
+"POT-Creation-Date: 2015-06-08 01:54:37+00:00\n"
+"PO-Revision-Date: 2015-06-08 09:55+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: Chinese <gergelyimreh@via.com.tw>\n"
 "Language: zh_CN\n"
@@ -126,19 +126,19 @@ msgstr "联系我们"
 msgid "Store"
 msgstr "威盛商城"
 
-#: footer.php:34
+#: footer.php:33
 msgid "China"
 msgstr "中国"
 
-#: footer.php:39 footer.php:55
+#: footer.php:38 footer.php:54
 msgid "Rest of the World"
 msgstr "其它国家和地区"
 
-#: footer.php:45
+#: footer.php:44
 msgid "Americas"
 msgstr "美洲"
 
-#: footer.php:50
+#: footer.php:49
 msgid "Europe"
 msgstr "欧洲"
 
@@ -150,11 +150,24 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:46
+#: functions.php:196
+msgid "Important"
+msgstr "重要"
+
+#: functions.php:196
+msgid ""
+"By downloading these software packages, you indicate your acceptance of the "
+"<a href=\"%s\">VIA Software License agreement</a>. If you do not agree with "
+"any of the terms and conditions, do not continue to download the software."
+msgstr ""
+"一旦下载该系列软件包，表明您已同意软件许可协议。如您不同意<a href=\"%s\">软件"
+"许可协议的任何条款和条件</a>，请不要继续下载该软件。"
+
+#: header.php:47
 msgid "Menu"
 msgstr ""
 
-#: header.php:47
+#: header.php:48
 msgid "Skip to content"
 msgstr ""
 
@@ -181,12 +194,12 @@ msgstr "阅读导航"
 #: inc/template-tags.php:55
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
 #: inc/template-tags.php:56
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:82
 msgctxt "post date"

@@ -192,7 +192,8 @@ function license_shortcode() {
 	 $language = pll_current_language('slug');
 	 $license_page_id = 3539;
 	 $tr_id = pll_get_post($license_page_id, $language);
-	 $link_text = '<span class="license"><span id="license-header">Important</span>: By downloading these software packages, you indicate your acceptance of the <a href="' . get_page_link($tr_id) . '">VIA Software License agreement</a>. If you do not agree with any of the terms and conditions, do not continue to download the software.</span>';
+     $url = get_page_link($tr_id);
+     $link_text = '<span class="license">' . '<span id="license-header">' . __('Important', viaembedded) . '</span>: ' . sprintf( wp_kses( __( 'By downloading these software packages, you indicate your acceptance of the <a href="%s">VIA Software License agreement</a>. If you do not agree with any of the terms and conditions, do not continue to download the software.', 'viaembedded' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $url ) ) . '</span>';
 	 return $link_text;
 }
 add_shortcode('license', 'license_shortcode');

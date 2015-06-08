@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VIA Embedded 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-03-26 03:00:15+00:00\n"
+"POT-Creation-Date: 2015-06-08 01:54:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -123,19 +123,19 @@ msgstr ""
 msgid "Store"
 msgstr ""
 
-#: footer.php:34
+#: footer.php:33
 msgid "China"
 msgstr ""
 
-#: footer.php:39 footer.php:55
+#: footer.php:38 footer.php:54
 msgid "Rest of the World"
 msgstr ""
 
-#: footer.php:45
+#: footer.php:44
 msgid "Americas"
 msgstr ""
 
-#: footer.php:50
+#: footer.php:49
 msgid "Europe"
 msgstr ""
 
@@ -147,11 +147,22 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:46
-msgid "Menu"
+#: functions.php:196
+msgid "Important"
+msgstr ""
+
+#: functions.php:196
+msgid ""
+"By downloading these software packages, you indicate your acceptance of the "
+"<a href=\"%s\">VIA Software License agreement</a>. If you do not agree with "
+"any of the terms and conditions, do not continue to download the software."
 msgstr ""
 
 #: header.php:47
+msgid "Menu"
+msgstr ""
+
+#: header.php:48
 msgid "Skip to content"
 msgstr ""
 

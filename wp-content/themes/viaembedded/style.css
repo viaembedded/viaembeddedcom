@@ -1736,7 +1736,7 @@ div#mc_embed_signup {
     list-style: none;
     display: inline;
     white-space: nowrap;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 label[for=mce-EMAIL] {
@@ -1786,4 +1786,18 @@ div#mc_embed_signup_scroll > div {
     padding-top: 10px;
     width: 95%;
     margin: 0 auto;
+}
+
+
+/* BSP signup form */
+div#bspsignup > ul > lh {
+    font-weight: bold;
+}
+
+div.bspsignup > ul > lh {
+    font-weight: bold;
+}
+
+div.bspsignup > ul {
+    margin: 0.25em 0 0 0.5em;
 }

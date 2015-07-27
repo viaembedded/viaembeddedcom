@@ -8,50 +8,53 @@
                 <label for="mce-EMAIL">Email Address</label>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
-            <div class="mc-field-group input-group"> <strong>Products of Interest </strong>
-
-                <ul>
-                    <li>
-                        <input type="checkbox" value="1" name="group[16297][1]" id="mce-group[16297]-16297-0">
-                        <label for="mce-group[16297]-16297-0">VAB-600</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="2" name="group[16297][2]" id="mce-group[16297]-16297-1">
-                        <label for="mce-group[16297]-16297-1">VAB-800</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="4" name="group[16297][4]" id="mce-group[16297]-16297-2">
-                        <label for="mce-group[16297]-16297-2">VAB-820</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="8" name="group[16297][8]" id="mce-group[16297]-16297-3">
-                        <label for="mce-group[16297]-16297-3">VAB-1000</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="16" name="group[16297][16]" id="mce-group[16297]-16297-4">
-                        <label for="mce-group[16297]-16297-4">ALTA DS</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="32" name="group[16297][32]" id="mce-group[16297]-16297-5">
-                        <label for="mce-group[16297]-16297-5">ALTA DS 2</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="64" name="group[16297][64]" id="mce-group[16297]-16297-6">
-                        <label for="mce-group[16297]-16297-6">AMOS-800</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="128" name="group[16297][128]" id="mce-group[16297]-16297-7">
-                        <label for="mce-group[16297]-16297-7">AMOS-820</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="256" name="group[16297][256]" id="mce-group[16297]-16297-8">
-                        <label for="mce-group[16297]-16297-8">Viega Tablet</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" value="512" name="group[16297][512]" id="mce-group[16297]-16297-9">
-                        <label for="mce-group[16297]-16297-9">ARTiGO A900</label>
-                    </li>
-                </ul>
+            <div class="mc-field-group input-group bspsignup"> <strong>Products of Interest </strong>
+                    <ul>
+			    <lh>Boards: </lh>
+			    <li>
+				    <input type="checkbox" value="8" name="group[16297][8]" id="mce-group[16297]-16297-3">
+				    <label for="mce-group[16297]-16297-3">VAB-1000</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="4" name="group[16297][4]" id="mce-group[16297]-16297-2">
+				    <label for="mce-group[16297]-16297-2">VAB-820</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="2" name="group[16297][2]" id="mce-group[16297]-16297-1">
+				    <label for="mce-group[16297]-16297-1">VAB-800</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="1" name="group[16297][1]" id="mce-group[16297]-16297-0">
+				    <label for="mce-group[16297]-16297-0">VAB-600</label>
+			    </li>
+		    </ul>
+		    <ul>
+			    <lh>Systems: </lh>
+			    <li>
+				    <input type="checkbox" value="32" name="group[16297][32]" id="mce-group[16297]-16297-5">
+				    <label for="mce-group[16297]-16297-5">ALTA DS 2</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="16" name="group[16297][16]" id="mce-group[16297]-16297-4">
+				    <label for="mce-group[16297]-16297-4">ALTA DS</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="128" name="group[16297][128]" id="mce-group[16297]-16297-7">
+				    <label for="mce-group[16297]-16297-7">AMOS-820</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="64" name="group[16297][64]" id="mce-group[16297]-16297-6">
+				    <label for="mce-group[16297]-16297-6">AMOS-800</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="512" name="group[16297][512]" id="mce-group[16297]-16297-9">
+				    <label for="mce-group[16297]-16297-9">ARTiGO A900</label>
+			    </li>
+			    <li>
+				    <input type="checkbox" value="256" name="group[16297][256]" id="mce-group[16297]-16297-8">
+				    <label for="mce-group[16297]-16297-8">Viega Tablet</label>
+			    </li>
+                    </ul>
             </div>
             <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>

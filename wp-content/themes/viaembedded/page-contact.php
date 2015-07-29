@@ -16,7 +16,7 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-		<div style="margin:0px;padding:0px;overflow:hidden;height:2000px">
+		<div style="margin:0px;padding:0px;overflow:hidden;height:2100px">
     <iframe src="http://contact.viaembedded.com/en/service/contact.jsp" frameborder="0" style="overflow:hidden;height:150%;width:150%" height="150%" width="150%" scrolling="no" seamless="seamless"></iframe>
 		</div>
 

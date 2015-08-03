@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: viaembedded\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-06-08 01:54:37+00:00\n"
-"PO-Revision-Date: 2015-06-08 09:55+0800\n"
+"POT-Creation-Date: 2015-08-03 03:52:27+00:00\n"
+"PO-Revision-Date: 2015-08-03 11:53+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: Chinese <gergelyimreh@via.com.tw>\n"
 "Language: zh_CN\n"
@@ -130,15 +130,19 @@ msgstr "威盛商城"
 msgid "China"
 msgstr "中国"
 
-#: footer.php:38 footer.php:54
+#: footer.php:38 footer.php:49 footer.php:65
 msgid "Rest of the World"
 msgstr "其它国家和地区"
 
 #: footer.php:44
+msgid "Japan"
+msgstr "日本"
+
+#: footer.php:55
 msgid "Americas"
 msgstr "美洲"
 
-#: footer.php:49
+#: footer.php:60
 msgid "Europe"
 msgstr "欧洲"
 
@@ -334,7 +338,8 @@ msgid "Archives"
 msgstr ""
 
 #. translators: %s: Name of a post category
-#: page-home-cn.php:37 page-home-cn.php:73 page-home.php:37 page-home.php:73
+#: page-home-cn.php:37 page-home-cn.php:73 page-home-ja.php:37
+#: page-home-ja.php:73 page-home.php:37 page-home.php:73
 msgid "Latest in %s"
 msgstr "最新%s"
 

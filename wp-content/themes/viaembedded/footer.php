@@ -39,6 +39,17 @@
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
 				</div>
+			        <?php } elseif($language == "ja") { ?>
+				<div>
+					<strong><?php _e("Japan", "viaembedded"); ?></strong><br>
+					<a href="tel:+81-3-5466-1637">+81-3-5466-1637</a><br>
+					<a href="mailto:embedded@viatech.com.cn">embedded@viatech.com.cn</a>
+				</div>
+				<div>
+					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>
+					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
+					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
+				</div>
 				<?php } else { ?>
 				<div>
 					<strong><?php _e("Americas", "viaembedded"); ?></strong><br>

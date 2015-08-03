@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VIA Embedded 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-06-08 01:54:37+00:00\n"
+"POT-Creation-Date: 2015-08-03 03:52:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -127,15 +127,19 @@ msgstr ""
 msgid "China"
 msgstr ""
 
-#: footer.php:38 footer.php:54
+#: footer.php:38 footer.php:49 footer.php:65
 msgid "Rest of the World"
 msgstr ""
 
 #: footer.php:44
+msgid "Japan"
+msgstr ""
+
+#: footer.php:55
 msgid "Americas"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:60
 msgid "Europe"
 msgstr ""
 
@@ -329,7 +333,8 @@ msgid "Archives"
 msgstr ""
 
 #. translators: %s: Name of a post category
-#: page-home-cn.php:37 page-home-cn.php:73 page-home.php:37 page-home.php:73
+#: page-home-cn.php:37 page-home-cn.php:73 page-home-ja.php:37
+#: page-home-ja.php:73 page-home.php:37 page-home.php:73
 msgid "Latest in %s"
 msgstr ""
 

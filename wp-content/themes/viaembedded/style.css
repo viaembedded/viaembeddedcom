@@ -1811,6 +1811,7 @@ div.bspsignup > ul {
 
 /* TEMPORARY for translation
    Remove when finished with that! */
-div#language-switcher > ul >  li.lang-item-ja {
+div#language-switcher > ul >  li.lang-item-ja,
+div#language-switcher > ul >  li.lang-item-tw {
     visibility: hidden;
 }

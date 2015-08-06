@@ -833,13 +833,15 @@ a.nodecorate {
 
 article.category-press .entry-title,
 article.category-press-cn .entry-title,
-article.category-press-ja .entry-title {
+article.category-press-ja .entry-title,
+article.category-press-tw .entry-title {
     font-size: 1.6em;
 }
 
 article.category-press span.byline,
 article.category-press-cn span.byline,
-article.category-press-ja span.byline {
+article.category-press-ja span.byline,
+article.category-press-tw span.byline {
     display: none;
 }
 

@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-08-06 16:23+0800\n"
+"PO-Revision-Date: 2015-08-12 13:45+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.7.5\n"
@@ -89,7 +89,7 @@ msgstr ""
 
 #: content-product.php:43
 msgid "Order Sample"
-msgstr ""
+msgstr "訂購樣品"
 
 #. translators: %s: Name of page
 #: content-stream.php:26

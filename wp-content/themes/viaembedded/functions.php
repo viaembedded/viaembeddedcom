@@ -134,7 +134,8 @@ add_action( 'widgets_init', 'viaembedded_widgets_init' );
  * Enqueue scripts and styles.
  */
 function viaembedded_scripts() {
-	wp_enqueue_style( 'viaembedded-style', get_stylesheet_uri(), false, filemtime( get_stylesheet_directory() . '/style.css') );
+    /* Theme's own style */
+    wp_enqueue_style( 'viaembedded-style', get_stylesheet_uri(), array('bootstrap', 'jquery-ui'), filemtime( get_stylesheet_directory() . '/style.css') );
 
 	// wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 	wp_enqueue_style( 'viaembedded-tabby-mod', get_template_directory_uri() . '/tabby-mod.css', array('tabby.css') );
@@ -155,6 +156,11 @@ function viaembedded_scripts() {
 	wp_enqueue_script( 'viaembedded-slider', get_template_directory_uri() . '/js/slider.js', array('viaembedded-jquery-slides'), null, true );
 	wp_enqueue_script( 'viaembedded-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'viaembedded-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+    /* Bootstrap */
+    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5' );
+    wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.min.css', array('bootstrap'), '3.3.5' );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/lib/bootstrap.min.js', array('jquery'), '3.3.5' );
 
 	wp_register_script( 'bsplist-selector', get_template_directory_uri(). '/js/bsplist.js', array('jquery'), null );
 

@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-08-21 11:04+0800\n"
+"PO-Revision-Date: 2015-08-25 17:15+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.4\n"
@@ -17,26 +17,26 @@ msgstr ""
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "糟糕! 沒有可顯示的頁面。"
 
 #: 404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
+msgstr "貌似這個位置沒有可顯示的頁面。試試以下其它連結或重新搜尋?"
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "常用分類"
 
 #. translators: %1$s: smiley
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "試著看看每月存檔資料。%1$s"
 
 #: archive.php:35
 msgid "Subcategories"
-msgstr ""
+msgstr "分類"
 
 #: comments.php:28
 msgctxt "comments title"
@@ -58,7 +58,7 @@ msgstr ""
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "沒有可顯示的內容"
 
 #: content-none.php:19
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "抱歉，沒有可顯示的內容。請您嘗試其它關鍵字。"
 
 #: content-none.php:28
 msgid ""
@@ -93,37 +93,37 @@ msgstr "訂購樣品"
 #. translators: %s: Name of page
 #: content-stream.php:26
 msgid "Read more %s"
-msgstr ""
+msgstr "了解更多 %s"
 
 #. translators: %s: Name of current post
 #: content.php:27
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "閱讀全文 %s <span class=\"meta-nav\">&rarr;</span>"
 
 #. translators: Footer header
 #: footer.php:18
 msgid "Products"
-msgstr ""
+msgstr "威盛產品"
 
 #. translators: Footer header
 #: footer.php:19
 msgid "Solutions"
-msgstr ""
+msgstr "解決方案"
 
 #. translators: Footer header
 #: footer.php:20
 msgid "Services"
-msgstr ""
+msgstr "威盛服務"
 
 #. translators: Footer header
 #: footer.php:21
 msgid "Contact"
-msgstr ""
+msgstr "聯絡我們"
 
 #. translators: Footer header
 #: footer.php:22
 msgid "Store"
-msgstr ""
+msgstr "威盛商城"
 
 #: footer.php:33
 msgid "China"
@@ -166,7 +166,7 @@ msgstr ""
 
 #: header.php:47
 msgid "Menu"
-msgstr ""
+msgstr "選單"
 
 #: header.php:48
 msgid "Skip to content"
@@ -182,11 +182,11 @@ msgstr ""
 
 #: inc/template-tags.php:25
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> 前一篇"
 
 #: inc/template-tags.php:29
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "最新文章 <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
@@ -205,25 +205,25 @@ msgstr ""
 #: inc/template-tags.php:82
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "發布日期 %s"
 
 #: inc/template-tags.php:87
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "作者 %s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:104 inc/template-tags.php:110
 msgid ", "
-msgstr ""
+msgstr "，"
 
 #: inc/template-tags.php:106
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "類別 %1$s"
 
 #: inc/template-tags.php:112
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "標籤 %1$s"
 
 #: inc/template-tags.php:118
 msgid "Leave a comment"
@@ -323,7 +323,7 @@ msgstr ""
 
 #: inc/template-tags.php:169
 msgid "Archives: %s"
-msgstr ""
+msgstr "存檔資料：%s"
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 #: inc/template-tags.php:173
@@ -332,7 +332,7 @@ msgstr ""
 
 #: inc/template-tags.php:175
 msgid "Archives"
-msgstr ""
+msgstr "存檔資料"
 
 #. translators: %s: Name of a post category
 #: page-home-cn.php:37 page-home-cn.php:73 page-home-ja.php:37
@@ -342,7 +342,7 @@ msgstr "最新%s"
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "搜索結果：%s"
 
 #. Theme Name of the plugin/theme
 msgid "VIA Embedded"

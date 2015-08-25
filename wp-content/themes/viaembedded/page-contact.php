@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * The template for displaying the contact page.
+ * The template for displaying the contact page for the different languages.
  *
  * @package VIA Embedded
  */
@@ -17,7 +17,21 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		<div style="margin:0px;padding:0px;overflow:hidden;height:2100px">
-    <iframe src="http://contact.viaembedded.com/en/service/contact.jsp" frameborder="0" style="overflow:hidden;height:150%;width:150%" height="150%" width="150%" scrolling="no" seamless="seamless"></iframe>
+<?php
+    $language = pll_current_language('slug');
+    if ($language == "cn") {
+          $contact_url = "http://contact.viaembedded.com/cn/service/contact.jsp";
+    } elseif($language == "ja") {
+          $contact_url = "http://contact.viaembedded.com/jp/service/contact.jsp";
+    } elseif($language == "tw") {
+          $contact_url = "http://contact.viaembedded.com/tw/service/contact.jsp";
+    } else {
+          /* "en" and default to unknown languages */
+          $contact_url = "http://contact.viaembedded.com/en/service/contact.jsp";
+    };
+?>
+
+    <iframe src="<?php echo $contact_url;?>" frameborder="0" style="overflow:hidden;height:150%;width:150%" height="150%" width="150%" scrolling="no" seamless="seamless"></iframe>
 		</div>
 
 		</main><!-- #main -->

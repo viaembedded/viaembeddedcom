@@ -8,42 +8,43 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-08-04 15:52+0800\n"
+"PO-Revision-Date: 2015-08-25 17:25+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: ja_JP\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "ページが見つかりません。"
 
 #: 404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"この場所では何も見つかりませんでした。以下のリンクまたは検索のいずれかを試し"
+"てみてください！"
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "よく使用されるカテゴリー"
 
 #. translators: %1$s: smiley
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "毎月のアーカイブで探してみてください。 %1$s"
 
 #: archive.php:35
 msgid "Subcategories"
-msgstr ""
+msgstr "サブカテゴリー"
 
 #: comments.php:28
 msgctxt "comments title"
 msgid "One mention on the Web for &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s mentions on the Web for &ldquo;%2$s&rdquo;"
 msgstr[0] ""
-msgstr[1] ""
 
 #: comments.php:35 comments.php:52
 msgid "Comment navigation"
@@ -59,7 +60,7 @@ msgstr ""
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "何も見つかりませんでした"
 
 #: content-none.php:19
 msgid ""
@@ -71,6 +72,8 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"申し訳ありませんが、何も検索条件に一致しません。いくつかの異なったキーワード"
+"で、もう一度やり直してください。"
 
 #: content-none.php:28
 msgid ""
@@ -94,17 +97,17 @@ msgstr "サンプル注文"
 #. translators: %s: Name of page
 #: content-stream.php:26
 msgid "Read more %s"
-msgstr ""
+msgstr "続きを読む %s"
 
 #. translators: %s: Name of current post
 #: content.php:27
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "続きを読む %s <span class=\"meta-nav\">&rarr;</span>"
 
 #. translators: Footer header
 #: footer.php:18
 msgid "Products"
-msgstr ""
+msgstr "製品"
 
 #. translators: Footer header
 #: footer.php:19
@@ -114,17 +117,17 @@ msgstr ""
 #. translators: Footer header
 #: footer.php:20
 msgid "Services"
-msgstr ""
+msgstr "サービス"
 
 #. translators: Footer header
 #: footer.php:21
 msgid "Contact"
-msgstr ""
+msgstr "お問い合わせ"
 
 #. translators: Footer header
 #: footer.php:22
 msgid "Store"
-msgstr ""
+msgstr "ストア"
 
 #: footer.php:33
 msgid "China"
@@ -167,7 +170,7 @@ msgstr ""
 
 #: header.php:47
 msgid "Menu"
-msgstr ""
+msgstr "メニュー"
 
 #: header.php:48
 msgid "Skip to content"
@@ -206,12 +209,12 @@ msgstr ""
 #: inc/template-tags.php:82
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "%sに投稿されました。"
 
 #: inc/template-tags.php:87
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "%sによって"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:104 inc/template-tags.php:110
@@ -220,11 +223,11 @@ msgstr ""
 
 #: inc/template-tags.php:106
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "%1$sで掲示されます"
 
 #: inc/template-tags.php:112
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "タグ:%1$s"
 
 #: inc/template-tags.php:118
 msgid "Leave a comment"
@@ -324,7 +327,7 @@ msgstr ""
 
 #: inc/template-tags.php:169
 msgid "Archives: %s"
-msgstr ""
+msgstr "アーカイブ: %s"
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 #: inc/template-tags.php:173
@@ -333,17 +336,17 @@ msgstr ""
 
 #: inc/template-tags.php:175
 msgid "Archives"
-msgstr ""
+msgstr "アーカイブ"
 
 #. translators: %s: Name of a post category
 #: page-home-cn.php:37 page-home-cn.php:73 page-home-ja.php:37
 #: page-home-ja.php:73 page-home.php:37 page-home.php:73
 msgid "Latest in %s"
-msgstr ""
+msgstr "最新%s"
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "%sの検索結果"
 
 #. Theme Name of the plugin/theme
 msgid "VIA Embedded"

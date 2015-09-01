@@ -43,7 +43,7 @@
 				<div>
 					<strong><?php _e("Japan", "viaembedded"); ?></strong><br>
 					<a href="tel:+81-3-5466-1637">+81-3-5466-1637</a><br>
-					<a href="mailto:embedded@viatech.com.cn">embedded@viatech.com.cn</a>
+					<a href="mailto:embedded@viatech.co.jp">embedded@viatech.co.jp</a>
 				</div>
 				<div>
 					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>

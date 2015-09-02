@@ -204,7 +204,7 @@ function license_shortcode() {
      $link_text = '<span class="license">' . '<span id="license-header">' .  __('Important', viaembedded) . '</span>' . $colon . sprintf( wp_kses( __( 'By downloading these software packages, you indicate your acceptance of the <a href="%s">VIA Software License agreement</a>. If you do not agree with any of the terms and conditions, do not continue to download the software.', 'viaembedded' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $url ) ) . '</span>';
 	 return $link_text;
 }
-add_shortcode('license', 'license_shortcode');
+add_shortcode('softwarelicense', 'license_shortcode');
 
 // Add BSP update signup mailing list shortcode
 // [bsplist product="VAB-600"]

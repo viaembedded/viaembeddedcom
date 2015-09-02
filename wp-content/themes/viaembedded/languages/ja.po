@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: VIA Embedded 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
 "POT-Creation-Date: 2015-09-02 14:51+0800\n"
-"PO-Revision-Date: 2015-09-02 14:52+0800\n"
+"PO-Revision-Date: 2015-09-02 17:38+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -352,7 +352,7 @@ msgstr "アーカイブ"
 #: page-home-ja.php:73 page-home-tw.php:37 page-home-tw.php:73 page-home.php:37
 #: page-home.php:73
 msgid "Latest in %s"
-msgstr "最新%s"
+msgstr "最新の%s"
 
 #: search.php:16
 msgid "Search Results for: %s"

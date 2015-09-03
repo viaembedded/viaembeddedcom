@@ -862,6 +862,10 @@ article.page .entry-content {
     text-justify: inter-word;
 }
 
+article.post .entry-content {
+    padding-top: 1em;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;

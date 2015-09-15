@@ -1454,6 +1454,10 @@ div#language-switcher ul li.lang-item {
     margin-right: 15px;
 }
 
+#banner-logo {
+    float: right;
+}
+
 @media screen and (min-width: 768px) {
 
     #banner-row {
@@ -1471,9 +1475,6 @@ div#language-switcher ul li.lang-item {
     #banner-logo-outer {
 	position: relative;
 	height:50px;
-    }
-    #banner-logo {
-	float: right;
     }
 
     #site-navigation-outer {

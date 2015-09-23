@@ -51,6 +51,10 @@
 				    <label for="mce-group[16297]-16297-9">ARTiGO A900</label>
 			    </li>
 			    <li>
+				    <input type="checkbox" value="512" name="group[16297][1024]" id="mce-group[16297]-16297-10">
+				    <label for="mce-group[16297]-16297-10">ARTiGO A600</label>
+			    </li>
+			    <li>
 				    <input type="checkbox" value="256" name="group[16297][256]" id="mce-group[16297]-16297-8">
 				    <label for="mce-group[16297]-16297-8">Viega Tablet</label>
 			    </li>

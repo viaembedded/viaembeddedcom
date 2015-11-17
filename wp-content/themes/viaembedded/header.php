@@ -20,6 +20,26 @@
 endif;?>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/images/favicon-152.png">
+<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/images/favicon-144.png">
+<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/images/favicon-120.png">
+<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/favicon-114.png">
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/favicon-72.png">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/favicon-57.png">
+<!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/favicon-144.png">
+<!-- Others -->
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon-228.png" sizes="228x228">
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon-195.png" sizes="195x195">
+
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/lib/html5shiv.js"></script>
 <![endif]-->

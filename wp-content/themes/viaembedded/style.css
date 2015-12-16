@@ -1294,6 +1294,19 @@ table.t-financial-release tr td[colspan]:hover {
     background-color: #E3E3E3;
 }
 
+table.t-governance {
+    border-top: thin solid black;
+    font-size: 18px;
+}
+table.t-governance .column-1 {
+    background: #007AC2;
+    color: white;
+}
+table.t-governance .column-2 {
+    width: 150px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 797px) {
 
     table.t-c1-fixwidth .column-1{

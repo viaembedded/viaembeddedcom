@@ -96,7 +96,9 @@ class UberMenuItemDefault extends UberMenuItem{
 	function alter( &$children ){
 
 		$autocolumns = $this->getSetting( 'submenu_autocolumns' );
-		if( $autocolumns && $autocolumns != 'disabled' ){
+		if( $autocolumns && 													//Value is set
+			$autocolumns != 'disabled' && 										//Value is not disabled
+			isset( $children[$this->ID] ) ){									//Children exist (otherwise, there are no columns to autocreate, and this will cause an issue)
 
 			$item_count = count( $children[$this->ID] );						//Total original child items
 

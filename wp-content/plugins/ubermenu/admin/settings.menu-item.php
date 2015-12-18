@@ -126,6 +126,16 @@ function ubermenu_menu_item_settings_panel(){
 						</span>
 					</div>
 
+					<div class="ubermenu-menu-item-load-error-notice ubermenu-admin-notice ubermenu-admin-notice-warning">
+						<p>If you are seeing this error, your settings have not loaded properly.  This is most commonly caused by a memory exception 
+							from trying to load too many posts or terms.  Please visit the <em>UberMenu Control Panel &gt; General Settings &gt; Advanced Menu Items</em> and enable the following settings:</p>
+						<ul>
+							<li><strong>Disable Autocomplete</strong></li>
+							<li><strong>Disable Dynamic Posts Author Selection</strong></li>
+						</ul>
+						<p>If this does not resolve the issue, please enable WP_DEBUG and check for PHP errors in your Appearance &gt; Menus panel.</p>
+					</div>
+
 					<?php foreach( $ordered_panels as $order => $panel_id ): 
 							$panel = $panels[$panel_id];
 							$panel_settings = $settings[$panel_id];	
@@ -204,7 +214,7 @@ function ubermenu_menu_item_settings_panel(){
 
 					<?php endforeach; ?>
 
-					
+					<span class="ubermenu-settings-completion-marker"></span>
 				</form>
 			</div>
 		</div>
@@ -897,6 +907,16 @@ function ubermenu_menu_item_settings(){
 		'desc'		=> __( 'By default, every mega submenu will be at least 50% width of the menu bar.  If you need to adjust this you can override it here.  Include the units (px/em/%).' , 'ubermenu' ),
 		//'tip'		=> __( '', 'ubermenu' ),
 		'on_save'	=> 'submenu_min_width',
+	);
+
+	$settings['submenu'][56] = array(
+		'id' 		=> 'submenu_min_height',
+		'title'		=> 'Submenu Minimum Height',
+		'type'		=> 'text',
+		'default' 	=> '',
+		'desc'		=> __( 'By default, submenus will be sized to their contents.  In 99% of cases, this will not be needed.  Note that this setting is not compatible with the Slide Reveal submenu transition.' , 'ubermenu' ),
+		//'tip'		=> __( '', 'ubermenu' ),
+		'on_save'	=> 'submenu_min_height',
 	);
 
 

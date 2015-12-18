@@ -523,18 +523,58 @@ function ubermenu_get_menu_style_top_level_item_divider_color( $field , $menu_id
 	}
 }
 
+function ubermenu_get_menu_style_top_level_item_divider_disable( $field , $menu_id , &$menu_styles ){
+
+	$val = ubermenu_op( $field['name'] , $menu_id );
+	if( $val == 'on' ){
+		$selector = ".ubermenu-$menu_id .ubermenu-item-level-0 > .ubermenu-target";
+		$menu_styles[$selector]['border'] = "none";
+		/*
+		if( ubermenu_op( 'orientation' , $menu_id ) == 'vertical' ){
+			$selector = ".ubermenu-$menu_id .ubermenu-item-level-0 > .ubermenu-target";
+			if( ubermenu_force_styles( $menu_id ) ){
+				$menu_styles[$selector]['border-top'] = "1px solid $val";
+			}
+			else{
+				$menu_styles[$selector]['border-top-color'] = $val;
+			}
+		}
+		else{
+			$selector = ".ubermenu-$menu_id .ubermenu-item-level-0 > .ubermenu-target";
+			if( ubermenu_force_styles( $menu_id ) ){
+				$menu_styles[$selector]['border-left'] = "1px solid $val";
+			}
+			else{
+				$menu_styles[$selector]['border-left-color'] = $val;
+			}
+		}
+		*/
+	}
+}
+
 /* 
  * TOP LEVEL ITEM GLOW OPACITY
  */
 function ubermenu_get_menu_style_top_level_item_glow_opacity( $field , $menu_id , &$menu_styles ){
 
 	$val = ubermenu_op( $field['name'] , $menu_id );
-	if( $val != '' ){
-		$selector = ".ubermenu-$menu_id .ubermenu-item-level-0 > .ubermenu-target";
-		$menu_styles[$selector]['-webkit-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
-		$menu_styles[$selector]['-moz-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
-		$menu_styles[$selector]['-o-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
-		$menu_styles[$selector]['box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+	if( is_numeric( $val ) ){
+		switch( ubermenu_op( 'orientation' , $menu_id ) ){
+			case 'horizontal':
+				$selector = ".ubermenu-$menu_id .ubermenu-item-level-0 > .ubermenu-target"; //added .ubermenu here, otherwise specificity to low to override Vertical orientation styles
+				$menu_styles[$selector]['-webkit-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-moz-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-o-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				break;
+			case 'vertical';
+				$selector = ".ubermenu-$menu_id.ubermenu-vertical .ubermenu-item-level-0 > .ubermenu-target"; //added .ubermenu here, otherwise specificity to low to override Vertical orientation styles
+				$menu_styles[$selector]['-webkit-box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-moz-box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-o-box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				break;
+		}
 	}
 }
 
@@ -545,11 +585,22 @@ function ubermenu_get_menu_style_top_level_item_glow_opacity_hover( $field , $me
 
 	$val = ubermenu_op( $field['name'] , $menu_id );
 	if( is_numeric( $val ) ){
-		$selector = ".ubermenu-$menu_id .ubermenu-item-level-0.ubermenu-active > .ubermenu-target";
-		$menu_styles[$selector]['-webkit-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
-		$menu_styles[$selector]['-moz-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
-		$menu_styles[$selector]['-o-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
-		$menu_styles[$selector]['box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+		switch( ubermenu_op( 'orientation' , $menu_id ) ){
+			case 'horizontal':
+				$selector = ".ubermenu-$menu_id .ubermenu-item-level-0.ubermenu-active > .ubermenu-target,.ubermenu-$menu_id .ubermenu-item-level-0:hover > .ubermenu-target";
+				$menu_styles[$selector]['-webkit-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-moz-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-o-box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['box-shadow'] = 'inset 1px 0 0 0 rgba(255,255,255,'. $val.')';
+				break;
+			case 'vertical';
+				$selector = ".ubermenu-$menu_id.ubermenu-vertical .ubermenu-item-level-0.ubermenu-active > .ubermenu-target,.ubermenu-$menu_id.ubermenu-vertical .ubermenu-item-level-0:hover > .ubermenu-target";
+				$menu_styles[$selector]['-webkit-box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-moz-box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['-o-box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				$menu_styles[$selector]['box-shadow'] = 'inset 1px 1px 0 0 rgba(255,255,255,'. $val.')';
+				break;
+		}
 	}
 }
 

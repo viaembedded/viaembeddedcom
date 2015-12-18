@@ -77,7 +77,11 @@ abstract class UberMenuItem{
 		}
 
 
-//uberp( $this->item->classes , 2 );
+		//New filter in 4.4 - 'nav_menu_item_args'
+		//Since this filter is most likely going to just break the menu, it is disabled by default, but can be enabled by adding
+		//define( 'UBERMENU_ALLOW_NAV_MENU_ITEM_ARGS_FILTER' , true );
+		//in the wp-config.php
+		if( UBERMENU_ALLOW_NAV_MENU_ITEM_ARGS_FILTER ) $this->args = apply_filters( 'nav_menu_item_args' , $this->args , $this->item );
 
 		$this->init();
 		
@@ -1109,6 +1113,7 @@ abstract class UberMenuItem{
 
 		if( $img_id || $img_src ){
 			$atts = array();
+			$img_srcset = $img_sizes = '';
 
 			$atts['class'] = 'ubermenu-image';
 
@@ -1123,16 +1128,28 @@ abstract class UberMenuItem{
 			//If the img_id is set, get the right image src file
 			if( $img_id ){
 				$img_src = wp_get_attachment_image_src( $img_id , $img_size );
+				if( function_exists( 'wp_get_attachment_image_srcset' ) ){
+					$img_srcset = wp_get_attachment_image_srcset( $img_id , $img_size );
+					$img_sizes = wp_get_attachment_image_sizes( $img_id , $img_size );
+				}
 			}
 
 			//Lazy Load
 			if( $this->depth > 0 && $this->get_menu_op( 'lazy_load_images' ) == 'on' ){
 				$atts['class'].= ' ubermenu-image-lazyload';
 				$atts['data-src'] = $img_src[0];
+				if( $img_srcset ){
+					$atts['data-srcset'] = $img_srcset;
+					if( $img_sizes ) $atts['data-sizes'] = $img_sizes;
+				}
 			}
 			//Normal Load
 			else{
 				$atts['src'] = $img_src[0];
+				if( $img_srcset ){
+					$atts['srcset'] = $img_srcset;
+					if( $img_sizes ) $atts['sizes'] = $img_sizes;
+				}
 			}
 
 

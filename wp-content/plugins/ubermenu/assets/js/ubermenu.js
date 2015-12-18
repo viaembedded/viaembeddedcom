@@ -32,7 +32,8 @@
 			intent_threshold: uber_op( 'intent_threshold' , { datatype: 'numeric' } , 300 ),	//maximum number of pixels mouse can move to be considered intent
 
 			scrollto_offset: uber_op( 'scrollto_offset' , { datatype: 'numeric' } , 0 ),
-			scrollto_duration: uber_op( 'scrollto_duration' , { datatype: 'numeric' } , 1000 )
+			scrollto_duration: uber_op( 'scrollto_duration' , { datatype: 'numeric' } , 1000 ),
+			collapse_after_scroll: uber_op( 'collapse_after_scroll' , {datatype:'boolean'}, true ),
 		}/*,
 		keys = {
 			BACKSPACE: 8,
@@ -239,6 +240,13 @@
 			var plugin = this;
 			$( '.ubermenu-item-level-0' ).one( 'ubermenuopen' , function(){
 				$( this ).find( '.ubermenu-image-lazyload' ).each( function(){
+					//Responsive images - add srcset and sizes if present
+					if( $( this ).data( 'srcset' ) ){
+						$( this )
+							.attr( 'srcset' , $( this ).data( 'srcset' ) )
+							.attr( 'sizes' , $( this ).data( 'sizes' ) )
+					}
+					//Whether responsive images (4.4+) or not, set src attribute
 					$( this )
 						.attr( 'src' , $( this ).data( 'src' ) )
 						.removeClass( 'ubermenu-image-lazyload' );
@@ -869,6 +877,7 @@
 							//after scroll
 							if( !anim_done ){
 								plugin.closeSubmenu( $link.closest( '.ubermenu-item-level-0' ) , 'handeLink' , plugin );
+								if( plugin.settings.collapse_after_scroll && !plugin.$ubermenu.hasClass( 'ubermenu-responsive-nocollapse' ) ) plugin.toggleMenuCollapse( 'toggle' , false , plugin );
 								$link.trigger( 'ubermenuscrollto_complete' );
 								anim_done = true;
 							}
@@ -1227,31 +1236,7 @@
 			//TODO just call off/on click.xyz?  or binding already fired?
 			//Or should we just have a state set that returns, independent of event type
 
-
-			var $toggle = $( toggle );
-
-			//plugin.$ubermenu.slideToggle();
-			
-			if( plugin.$ubermenu.hasClass( 'ubermenu-responsive-collapse' ) ){
-				plugin.$ubermenu.removeClass( 'ubermenu-responsive-collapse' );
-				$toggle.trigger( 'ubermenutoggledopen' );
-				$toggle.toggleClass( 'ubermenu-responsive-toggle-open' );
-			}
-			else{
-				plugin.$ubermenu.addClass( 'ubermenu-responsive-collapse' );
-				$toggle.trigger( 'ubermenutoggledclose' );
-				$toggle.toggleClass( 'ubermenu-responsive-toggle-open' );
-			}
-			//plugin.$ubermenu.toggleClass( 'ubermenu-responsive-collapse' );
-			//$toggle.trigger( 'ubermenutoggled' );
-
-			if( plugin.transitions && !plugin.$ubermenu.hasClass( 'ubermenu-responsive-nocollapse' ) ){
-				plugin.$ubermenu.addClass( 'ubermenu-in-transition' );
-				plugin.$ubermenu.on( plugin.transitionend + '_toggleubermenu', function(){
-						plugin.$ubermenu.removeClass( 'ubermenu-in-transition' );
-						plugin.$ubermenu.off( plugin.transitionend  + '_toggleubermenu' );
-					});
-			}
+			plugin.toggleMenuCollapse( 'toggle' , toggle , plugin );
 
 		},
 
@@ -1285,6 +1270,48 @@
 
 
 		/* Controllers */
+
+		toggleMenuCollapse: function( action , toggle , plugin ){
+
+			plugin = plugin || this;
+			toggle = toggle || '.ubermenu-resposive-toggle';
+
+			var $toggle = plugin.$ubermenu.find( toggle );
+			
+			action = action || 'toggle';
+
+			if( action == 'toggle' ){
+				if( plugin.$ubermenu.hasClass( 'ubermenu-responsive-collapse' ) ){
+					action = 'open';
+				}
+				else{
+					action = 'close';
+				}
+			}
+
+			//plugin.$ubermenu.slideToggle();
+			
+			if( action == 'open' ){
+				plugin.$ubermenu.removeClass( 'ubermenu-responsive-collapse' );
+				$toggle.trigger( 'ubermenutoggledopen' );
+				$toggle.toggleClass( 'ubermenu-responsive-toggle-open' );
+			}
+			else{
+				plugin.$ubermenu.addClass( 'ubermenu-responsive-collapse' );
+				$toggle.trigger( 'ubermenutoggledclose' );
+				$toggle.toggleClass( 'ubermenu-responsive-toggle-open' );
+			}
+			//plugin.$ubermenu.toggleClass( 'ubermenu-responsive-collapse' );
+			//$toggle.trigger( 'ubermenutoggled' );
+
+			if( plugin.transitions && !plugin.$ubermenu.hasClass( 'ubermenu-responsive-nocollapse' ) ){
+				plugin.$ubermenu.addClass( 'ubermenu-in-transition' );
+				plugin.$ubermenu.on( plugin.transitionend + '_toggleubermenu', function(){
+						plugin.$ubermenu.removeClass( 'ubermenu-in-transition' );
+						plugin.$ubermenu.off( plugin.transitionend  + '_toggleubermenu' );
+					});
+			}
+		},
 
 		positionSubmenus: function(){
 

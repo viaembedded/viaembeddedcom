@@ -299,6 +299,9 @@
 .ubermenu-sub-indicators .ubermenu-item-has-children > .ubermenu-target.ubermenu-noindicator {
   padding-right: 20px;
 }
+.ubermenu-sub-indicators .ubermenu-item-mini.ubermenu-item-has-children > .ubermenu-target.ubermenu-noindicator {
+  padding-right: 5px;
+}
 .ubermenu-sub-indicators .ubermenu-has-submenu-drop > .ubermenu-noindicator:after {
   content: '';
   display: none;
@@ -685,7 +688,7 @@
 .ubermenu .ubermenu-submenu .ubermenu-submenu-type-flyout.ubermenu-submenu-align-right_edge_item {
   left: auto;
   right: 100%;
-  clip: rect(-10px, 5000px, 5000px, -10px);
+  clip: rect(-10px, 5000px, 5000px, -5000px);
 }
 .ubermenu .ubermenu-submenu .ubermenu-item.ubermenu-active > .ubermenu-submenu-type-flyout {
   top: 0;
@@ -702,7 +705,7 @@
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
   box-sizing: content-box;
-  clip: rect(-10px, 5000px, 5000px, 0);
+  clip: rect(-10px, 5000px, 5000px, -5000px);
 }
 .ubermenu.ubermenu-horizontal .ubermenu-item-level-1:first-child > .ubermenu-submenu-type-flyout,
 .ubermenu.ubermenu-horizontal .ubermenu-item-level-1:first-child > .ubermenu-submenu-type-flyout > .ubermenu-item:first-child > .ubermenu-submenu-type-flyout,
@@ -1031,6 +1034,9 @@
   padding-right: 0;
   margin-bottom: 1.3em;
 }
+.widget.ubermenu_navigation_widget-class {
+  overflow: visible;
+}
 /* Divider */
 .ubermenu .ubermenu-divider {
   clear: both;
@@ -1060,7 +1066,6 @@
 .ubermenu .ubermenu-search input.ubermenu-search-input {
   width: 100%;
   padding: 8px 40px 8px 15px;
-  height: 100%;
   color: #333;
   background: transparent;
   border: none;
@@ -1494,6 +1499,9 @@
     border-top-width: 0;
     border-bottom-width: 0;
   }
+  .ubermenu-responsive-default.ubermenu-responsive.ubermenu-responsive-collapse .ubermenu-item .ubermenu-submenu {
+    display: none;
+  }
   .ubermenu-responsive-default.ubermenu-responsive .ubermenu-item-level-0 {
     width: 50%;
   }
@@ -1624,6 +1632,9 @@
   .ubermenu-responsive-default.ubermenu.ubermenu-responsive .ubermenu-item-level-0.ubermenu-item-mini {
     min-width: 0;
     width: auto;
+  }
+  .ubermenu-responsive-default.ubermenu-vertical .ubermenu-item.ubermenu-item-level-0.ubermenu-relative.ubermenu-active > .ubermenu-submenu-drop.ubermenu-submenu-align-vertical_parent_item {
+    top: auto;
   }
 }
 @media screen and (max-width: 480px) {

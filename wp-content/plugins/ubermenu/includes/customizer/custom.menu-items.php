@@ -18,6 +18,7 @@ function ubermenu_generate_item_styles(){
 		$spacing = 12;
 		$delim = "/* $item_id */";
 		$remainder = $spacing - strlen( $delim );
+		if( $remainder < 0 ) $remainder = 0;
 		$styles.= $delim . str_repeat( ' ' , $remainder );
 
 		$k = 0;
@@ -322,6 +323,21 @@ function ubermenu_item_save_submenu_min_width( $item_id , $setting , $val , &$sa
 
 	$property_map = array(
 		'min-width' => $val
+	);
+
+	ubermenu_set_item_style( $item_id , $selector , $property_map );
+}
+
+function ubermenu_item_save_submenu_min_height( $item_id , $setting , $val , &$saved_settings ){
+
+	if( !$val ) return;
+
+	$selector = ".ubermenu .ubermenu-submenu.ubermenu-submenu-id-$item_id";
+
+	if( is_numeric( $val ) ) $val.= 'px';
+
+	$property_map = array(
+		'min-height' => $val
 	);
 
 	ubermenu_set_item_style( $item_id , $selector , $property_map );

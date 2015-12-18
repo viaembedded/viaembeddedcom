@@ -597,6 +597,15 @@ function ubermenu_settings_panel_fields_general( $fields ){
 			'group'	=> 'script_config',
 		),
 
+		217 => array(
+			'name'	=> 'collapse_after_scroll',
+			'label'	=> __( 'Collapse Menu after Scroll To (Mobile)' , 'ubermenu' ),
+			'desc'	=> __( 'When a ScrollTo-enabled item is clicked on mobile, collapse the menu after the scroll completes' , 'ubermenu' ),
+			'type'	=> 'checkbox',
+			'default'=> 'on',
+			'group'	=> 'script_config',
+		),
+
 		220 => array(
 			'name'	=> 'remove_conflicts',
 			'label' => __( 'Remove JS Conflicts' , 'ubermenu' ),
@@ -930,7 +939,8 @@ function ubermenu_settings_import_panel(){
 		
 
 		//ACTUAL IMPORT ACTION
-		if( isset( $_POST['ubermenu-settings-import-json'] ) ){
+		if( isset( $_POST['ubermenu-settings-import-json'] ) && check_admin_referer( 'ubermenu-settings-import' , 'ubermenu_nonce' ) ){
+			
 			$config_id = $_POST['config_id'];
 			$json = stripslashes( $_POST['ubermenu-settings-import-json'] );
 
@@ -969,6 +979,7 @@ function ubermenu_settings_import_panel(){
 					<input type="hidden" name="page" value="ubermenu-settings" />
 					<input type="hidden" name="do" value="settings-import" />
 					<input type="hidden" name="config_id" value="<?php echo $config_id; ?>" />
+					<?php wp_nonce_field( 'ubermenu-settings-import' , 'ubermenu_nonce' ); ?>
 
 					<p><?php _e( 'Paste your export data here to import the settings into this configuration' , 'ubermenu' ); ?></p>
 
@@ -1230,7 +1241,7 @@ function ubermenu_settings_panel(){
 	</div>
 	<?php
 
-	echo '<h2><strong>UberMenu</strong> Control Panel <span class="ubermenu-version">v'.UBERMENU_VERSION.'</span></h2>';
+	echo '<h1><strong>UberMenu</strong> Control Panel <span class="ubermenu-version">v'.UBERMENU_VERSION.'</span></h1>';
 
 	do_action( 'ubermenu_settings_before' );	
  

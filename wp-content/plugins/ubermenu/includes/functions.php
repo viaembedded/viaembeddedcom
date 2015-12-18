@@ -38,7 +38,7 @@ function ubermenu_load_assets(){
 
 	//Google Maps
 	if( ubermenu_op( 'load_google_maps' , 'general' ) == 'on' ){
-		wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?sensor=false' , array( 'jquery' ), false, true );
+		wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js' , array( 'jquery' ), false, true );
 	}
 
 	//UberMenu JS
@@ -64,6 +64,7 @@ function ubermenu_load_assets(){
 		'accessible'		=> ubermenu_op( 'accessible', 'general' ),
 		'retractor_display_strategy' => ubermenu_op( 'retractor_display_strategy' , 'general' ),
 		'touch_off_close'	=> ubermenu_op( 'touch_off_close' , 'general' ),
+		'collapse_after_scroll'	=> ubermenu_op( 'collapse_after_scroll' , 'general' ),
 		'v'					=> UBERMENU_VERSION,
 		'configurations'	=> ubermenu_get_menu_instances(true),
 		'ajax_url' 			=> admin_url( 'admin-ajax.php' ),
@@ -271,6 +272,11 @@ function ubermenu_get_nav_menu_args( $args , $integration_type , $config_id = 0 
 						return $args;
 					}
 				}
+
+				//Ignore Mobile?
+				if( ubermenu_op( 'disable_mobile' , $config_id ) == 'on' && ubermenu_is_mobile() ){
+					return $args;
+				}
 			}
 
 			break;
@@ -282,7 +288,7 @@ function ubermenu_get_nav_menu_args( $args , $integration_type , $config_id = 0 
 			if( $config_id != 'main' ){
 				$instances = ubermenu_get_menu_instances();
 				if( array_search( $config_id , $instances ) === false ){
-					$notice = '<strong>'.$config_id.'</strong> '. __( 'is not a valid Instance ID.  Please pass a valid instance ID to the ubermenu() function.' , 'ubermenu' );
+					$notice = '<strong>'.$config_id.'</strong> '. __( 'is not a valid Configuration ID.  Please pass a valid Configuration ID to the ubermenu() function.' , 'ubermenu' );
 					ubermenu_admin_notice( $notice );
 				}
 			}
@@ -742,6 +748,11 @@ function ubermenu_get_author_ops(){
 
 	$ops = array();
 
+	if( ubermenu_op( 'dynamic_authors_disable', 'general' ) == 'on' ){
+		$ops[999] = __( '[Authors selection disabled via Control Panel]' , 'ubermenu' );
+		return $ops;
+	}
+
 	$authors = get_users( array(
 		'who'	=> 'authors'
 	));;
@@ -819,7 +830,7 @@ function ubermenu_get_taxonomy_ops(){
 
 
 function ubermenu_get_term_ops( $ops = array() ){
-
+	//trigger_error( "Simulating Autocomplete memory exception" , E_USER_ERROR );
 	if( ubermenu_op( 'autocomplete_disable', 'general' ) == 'on' ){
 		$ops[999] = __( 'Autocomplete disabled in Control Panel.  Please enter ID manually' , 'ubermenu' );
 		return $ops;

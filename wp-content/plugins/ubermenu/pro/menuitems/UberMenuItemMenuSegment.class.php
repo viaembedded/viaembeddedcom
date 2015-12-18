@@ -29,6 +29,7 @@ class UberMenuItemMenuSegment extends UberMenuItem{
 	}
 
 	function get_start_el(){
+		$transient_key = $transient_expiry = '';
 		//up( $this->settings );
 		$menu_segment = $this->getSetting( 'menu_segment' );
 

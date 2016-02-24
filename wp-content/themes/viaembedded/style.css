@@ -1307,6 +1307,11 @@ table.t-governance .column-2 {
     text-align: center;
 }
 
+table.t-equal-2 .column-1,
+table.t-equal-2 .column-1 {
+    width: 50%;
+}
+
 @media only screen and (max-width: 797px) {
 
     table.t-c1-fixwidth .column-1{

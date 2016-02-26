@@ -683,18 +683,18 @@ class UberMenuItemDynamicPost extends UberMenuItemDefault{
 		$layout_pieces = compact( $layout_order );
 
 		//Output the anchor
-		$a .= $this->args->before;
+		if( isset( $this->args->before ) ) $a .= $this->args->before;
 		$a .= '<'.$tag. $attributes .'>';
-		$a .= $this->args->link_before;
+		if( isset( $this->args->link_before ) ) $a .= $this->args->link_before;
 
 		//Add pieces based on layout order		
 		foreach( $layout_pieces as $piece ){
 			$a.= $piece;
 		}
 		
-		$a .= $this->args->link_after;
+		if( isset( $this->args->link_after ) ) $a .= $this->args->link_after;
 		$a .= '</'.$tag.'>';
-		$a .= $this->args->after;
+		if( isset( $this->args->after ) ) $a .= $this->args->after;
 
 		return $a;
 	}

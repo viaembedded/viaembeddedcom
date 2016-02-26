@@ -680,7 +680,7 @@ function ubermenu_settings_panel_fields_general( $fields ){
 		340 => array(
 			'name'	=> 'migration',
 			'label'	=> __( 'Migrate Settings' , 'ubermenu' ),
-			'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=migration-check').'">'.__( 'Migrate Settings' , 'ubermenu' ).'</a><br/><p>'.__( 'Migrate UberMenu 2 Settings to UberMenu 3', 'ubermenu' ).'</p>',
+			'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=migration-check&ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' ) ).'">'.__( 'Migrate Settings' , 'ubermenu' ).'</a><br/><p>'.__( 'Migrate UberMenu 2 Settings to UberMenu 3', 'ubermenu' ).'</p>',
 			'type'	=> 'html',
 			'group'	=> 'maintenance',
 		),
@@ -688,7 +688,7 @@ function ubermenu_settings_panel_fields_general( $fields ){
 		350 => array(
 			'name'	=> 'reset_all',
 			'label'	=> __( 'Reset ALL Settings' , 'ubermenu' ),
-			'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=reset-all-check').'">'.__( 'Reset Settings' , 'ubermenu' ).'</a><br/><p>'.__( 'Reset ALL Control Panel settings to the factory defaults.', 'ubermenu' ).'</p>',
+			'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=reset-all-check&ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' )).'">'.__( 'Reset Settings' , 'ubermenu' ).'</a><br/><p>'.__( 'Reset ALL Control Panel settings to the factory defaults.', 'ubermenu' ).'</p>',
 			'type'	=> 'html',
 			'group'	=> 'maintenance',
 		),
@@ -885,6 +885,9 @@ function ubermenu_control_panel() {
 		ubermenu_settings_panel();
 	}
 	else{
+
+		check_admin_referer( 'ubermenu-control-panel-do' , 'ubermenu_nonce' );
+
 		switch( $_GET['do'] ){
 			case 'widget-manager':
 				ubermenu_widget_manager_panel();
@@ -939,9 +942,9 @@ function ubermenu_settings_import_panel(){
 		
 
 		//ACTUAL IMPORT ACTION
-		if( isset( $_POST['ubermenu-settings-import-json'] ) && check_admin_referer( 'ubermenu-settings-import' , 'ubermenu_nonce' ) ){
+		if( isset( $_POST['ubermenu-settings-import-json'] ) && check_admin_referer( 'ubermenu-control-panel-do' , 'ubermenu_nonce' ) ){ //check_admin_referer( 'ubermenu-settings-import' , 'ubermenu_nonce' )
 			
-			$config_id = $_POST['config_id'];
+			$config_id = sanitize_text_field( $_POST['config_id'] );
 			$json = stripslashes( $_POST['ubermenu-settings-import-json'] );
 
 			if( !$json ){
@@ -964,11 +967,11 @@ function ubermenu_settings_import_panel(){
 
 		//IMPORT DATA PANEL (PASTE EXPORT DATA)
 		else{
-			$config_id = $_GET['config_id'];
+			$config_id = sanitize_text_field( $_GET['config_id'] );
 			if( $config_id == 'main' ): ?>
 				<h3><?php _e( 'Import Settings for Main UberMenu Configuration' , 'ubermenu' ); ?></h3>
 			<?php else: ?>
-				<h3><?php _e( 'Import Settings for Configuration:' , 'ubermenu' ); ?> +<?php echo $config_id; ?></h3>
+				<h3><?php _e( 'Import Settings for Configuration:' , 'ubermenu' ); ?> +<?php echo esc_html( $config_id ); ?></h3>
 			<?php endif; ?>
 			
 			<?php 
@@ -978,8 +981,9 @@ function ubermenu_settings_import_panel(){
 				<form action="<?php echo admin_url( 'themes.php?page=ubermenu-settings&do=settings-import' ); ?>" method="POST">
 					<input type="hidden" name="page" value="ubermenu-settings" />
 					<input type="hidden" name="do" value="settings-import" />
-					<input type="hidden" name="config_id" value="<?php echo $config_id; ?>" />
-					<?php wp_nonce_field( 'ubermenu-settings-import' , 'ubermenu_nonce' ); ?>
+					<input type="hidden" name="config_id" value="<?php echo esc_html( $config_id ); ?>" />
+					<?php //wp_nonce_field( 'ubermenu-settings-import' , 'ubermenu_nonce' ); ?>
+					<?php wp_nonce_field( 'ubermenu-control-panel-do' , 'ubermenu_nonce' ); ?>
 
 					<p><?php _e( 'Paste your export data here to import the settings into this configuration' , 'ubermenu' ); ?></p>
 
@@ -1062,6 +1066,7 @@ function ubermenu_migration_panel(){
 				<form action="<?php echo admin_url( 'themes.php' ); ?>" method="GET">
 					<input type="hidden" name="page" value="ubermenu-settings" />
 					<input type="hidden" name="do" value="migrate" />
+					<?php wp_nonce_field( 'ubermenu-control-panel-do' , 'ubermenu_nonce' ); ?>
 
 					<!-- <h4>Style Generator</h4> -->
 
@@ -1154,6 +1159,7 @@ function ubermenu_reset_styles_check_panel(){
 			<form action="<?php echo admin_url( 'themes.php' ); ?>" method="GET">
 				<input type="hidden" name="page" value="ubermenu-settings" />
 				<input type="hidden" name="do" value="reset-styles" />
+				<?php wp_nonce_field( 'ubermenu-control-panel-do' , 'ubermenu_nonce' ); ?>
 
 				<br/>
 				<input type="submit" class="button button-primary" value="<?php _e( 'Confirm &amp; Reset Style Customizations' , 'ubermenu' ); ?>" />
@@ -1211,6 +1217,7 @@ function ubermenu_reset_all_check_panel(){
 			<form action="<?php echo admin_url( 'themes.php' ); ?>" method="GET">
 				<input type="hidden" name="page" value="ubermenu-settings" />
 				<input type="hidden" name="do" value="reset-all" />
+				<?php wp_nonce_field( 'ubermenu-control-panel-do' , 'ubermenu_nonce' ); ?>
 
 				<br/>
 				<input type="submit" class="button button-primary" value="<?php _e( 'Confirm &amp; Reset Settings' , 'ubermenu' ); ?>" />

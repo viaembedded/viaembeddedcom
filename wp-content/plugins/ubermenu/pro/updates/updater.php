@@ -9,7 +9,7 @@ if( !defined( 'UBERMENU_AUTO_UPDATES' ) ){
 	define( 'UBERMENU_AUTO_UPDATES' , 0 );
 }
 if( !defined( 'UBERMENU_UPDATES_CHECK_PERIOD' ) ){
-	define( 'UBERMENU_UPDATES_CHECK_PERIOD' , 48 );
+	define( 'UBERMENU_UPDATES_CHECK_PERIOD' , 24 );
 }
 
 function ubermenu_update_checker(){
@@ -23,7 +23,8 @@ function ubermenu_update_checker(){
 		//TODO: REMOVE
 		//define( 'UBERMENU_UPDATES_URL' , 'http://mavair.local/~chris/updates/ubermenu' );
 		
-		$uber_update_checker = new PluginUpdateChecker_1_6 (
+		//$uber_update_checker = new PluginUpdateChecker_1_6 (
+		$uber_update_checker = new PluginUpdateChecker_3_0 (
 			//$url,
 			UBERMENU_UPDATES_URL,
 		    UBERMENU_FILE,

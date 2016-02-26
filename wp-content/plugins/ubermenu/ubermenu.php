@@ -5,7 +5,7 @@ Plugin URI: http://wpmegamenu.com
 Description: Easily create beautiful, flexible, responsive mega menus 
 Author: Chris Mavricos, SevenSpark
 Author URI: http://sevenspark.com
-Version: 3.2.2.1
+Version: 3.2.3
 */
 
 // Exit if accessed directly
@@ -55,7 +55,7 @@ final class UberMenu {
 	 */
 	private function setup_constants() {
 		// Plugin version
-		define( 'UBERMENU_VERSION', '3.2.2.1' );
+		define( 'UBERMENU_VERSION', '3.2.3' );
 
 		//Override in wp-config.php
 

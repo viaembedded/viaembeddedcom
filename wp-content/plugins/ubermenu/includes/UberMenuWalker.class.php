@@ -79,6 +79,16 @@ class UberMenuWalker extends Walker_Nav_Menu {
 			return;
 		}
 
+//Autocolumn
+// if( $this->offset_depth > 0 && $element->menu_item_parent == 0 ){
+
+// 	$autocolumns = 3;
+// 	if( $element->ID == 533 ){
+// 		uberp( $children_elements );
+// 	// 	echo 'hi';
+// 	// 	uberp( $element );
+// 	}
+// }
 
 
 		//Automatically add rows!

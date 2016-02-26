@@ -1276,8 +1276,8 @@
 			plugin = plugin || this;
 			toggle = toggle || '.ubermenu-resposive-toggle';
 
-			var $toggle = plugin.$ubermenu.find( toggle );
-			
+			var $toggle = $( toggle + '[data-ubermenu-target="'+ plugin.$ubermenu.attr( 'id' ) + '"]');
+
 			action = action || 'toggle';
 
 			if( action == 'toggle' ){

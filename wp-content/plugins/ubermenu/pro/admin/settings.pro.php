@@ -1769,7 +1769,7 @@ function ubermenu_import_data( $data ){
 	// $html = '<textarea id="'.$name.'" name="'.$name.'"></textarea>';
 	// $html.= '<br/><span class="description">Paste export data above to import settings to this configuration</span>';
 	// $html.= '<br/><div class="ubermenu-alert">WARNING: This will override all settings for this configuration!</div>';
-	$html= '<a class="button button-primary" href="'.admin_url( 'themes.php?page=ubermenu-settings&amp;do=settings-import&amp;config_id='.$config_id ).'">Import Settings</a>';
+	$html= '<a class="button button-primary" href="'.admin_url( 'themes.php?page=ubermenu-settings&amp;do=settings-import&amp;config_id='.$config_id .'&amp;ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' ) ).'">Import Settings</a>';
 	return $html;
 }
 
@@ -2052,7 +2052,7 @@ function ubermenu_settings_panel_fields_pro( $all_fields = array() ){
 	$fields[360] = array(
 		'name'	=> 'reset_styles',
 		'label'	=> __( 'Reset Style Customization Settings' , 'ubermenu' ),
-		'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=reset-styles-check').'">'.__( 'Reset Style Customizations' , 'ubermenu' ).'</a><br/><p>'.__( 'Reset Style Customization Settings to the factory defaults.', 'ubermenu' ).'</p>',
+		'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=reset-styles-check&ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' )).'">'.__( 'Reset Style Customizations' , 'ubermenu' ).'</a><br/><p>'.__( 'Reset Style Customization Settings to the factory defaults.', 'ubermenu' ).'</p>',
 		'type'	=> 'html',
 		'group'	=> 'maintenance',
 	);
@@ -2060,7 +2060,7 @@ function ubermenu_settings_panel_fields_pro( $all_fields = array() ){
 	$fields[362] = array(
 		'name'	=> 'manage_widget_areas',
 		'label'	=> __( 'Widget Area Manager' , 'ubermenu' ),
-		'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=widget-manager').'">'.__( 'Manage Widget Areas' , 'ubermenu' ).'</a><br/><p>'.__( 'Choose which Custom Widget Areas to delete.  Useful for orphaned widget areas from deleted menu items.', 'ubermenu' ).'</p>',
+		'desc'	=> '<a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=widget-manager&ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' )).'">'.__( 'Manage Widget Areas' , 'ubermenu' ).'</a><br/><p>'.__( 'Choose which Custom Widget Areas to delete.  Useful for orphaned widget areas from deleted menu items.', 'ubermenu' ).'</p>',
 		'type'	=> 'html',
 		'group'	=> array( 'maintenance' , 'widgets' ),
 	);

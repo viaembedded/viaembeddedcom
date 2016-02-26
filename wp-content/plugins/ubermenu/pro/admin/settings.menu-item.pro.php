@@ -746,12 +746,16 @@ function ubermenu_pro_item_settings( $settings ){
 
 
 	/** ICONS **/
+	$icon_desc = __( 'Select a font icon to use with this item.' , 'ubermenu' );
+	if( !class_exists( 'UberMenu_Icons' ) ){
+		$icon_desc.= ' '.__( 'This set of icons contains over 50 of the most commonly used icons.  Get over 500 Font Awesome Icons and the ability to independently change colors, icon sizes, and positions with the ', 'ubermenu' ). '<a target="_blank" href="http://wpmegamenu.com/icons">UberMenu Icons Extension</a>';
+	}
 	$settings['icon'][10] = array(
 		'id' 		=> 'icon',
 		'title'		=> __( 'Icon', 'ubermenu' ),
 		'type'		=> 'icon',
 		'default' 	=> '',
-		'desc'		=> '',
+		'desc'		=> $icon_desc,
 		'ops'		=> 'ubermenu_get_icon_ops'
 	);
 
@@ -1252,6 +1256,31 @@ function ubermenu_pro_item_settings( $settings ){
 		'ops'		=> 'ubermenu_get_nav_menu_ops',
 		'default'	=> '',
 		'desc'		=> __( 'Select a menu to insert its items into the menu tree.' , 'ubermenu' ),
+
+	);
+
+	$settings['menu_segment'][15] = array(
+		'id'		=> 'submenu_autocolumns',
+		'title'		=> __( 'Automatic Columns' , 'ubermenu' ),
+		'desc'		=> __( 'Automatically divide the first level of items in this menu segment evenly across columns, organized vertically - top to bottom.  Note that the Column Submenu Default can be inherited through Menu Segments from their parents, but this setting must be set on the Menu Segment.', 'ubermenu' ),
+		//'tip'		=> __( 'How does this differ from "Submenu Column Default"? If you set "Submenu Automatic Columns" to 5, it\'ll create 5 even submenu columns and automatically divide the child items of this item into those columns, organized top to bottom.  If you set "Submenu Column Default" to 1/5, each child item will be 20% (1/5) of the submenu width and be organized left to right.  In practice, you\'d use "Submenu Automtic Columns" for submenus without column headers, and the "Submenu Column Default" setting for submenus with column headers', 'ubermenu' ),
+		'type'		=> 'radio',
+		'ops'		=> array( 'group' => array(
+						'disabled'	=> array(
+							'name'	=> __( 'Disabled' , 'ubermenu' ),
+						),
+						1 	=> 1, 
+						2 	=> 2,
+						3 	=> 3,
+						4 	=> 4,
+						5 	=> 5,
+						6 	=> 6,
+						7 	=> 7,
+						8 	=> 8,
+						9 	=> 9,
+						10 	=> 10
+					)),
+		'default' => 'disabled',
 
 	);
 	$settings['menu_segment'][20] = array(

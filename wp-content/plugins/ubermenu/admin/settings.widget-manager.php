@@ -45,6 +45,7 @@ function ubermenu_widget_manager_panel(){
 		<form>
 			<input type="hidden" name="page" value="ubermenu-settings" />
 			<input type="hidden" name="do" value="widget-manager" />
+			<?php wp_nonce_field( 'ubermenu-control-panel-do' , 'ubermenu_nonce' ); ?>
 
 		<?php
 		foreach( $menu_item_widget_areas as $menu_item_id => $widget_title ){

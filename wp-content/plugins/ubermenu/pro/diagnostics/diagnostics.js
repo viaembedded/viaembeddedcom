@@ -2,7 +2,7 @@
 
 	window.ubermenu_diagnostics_present = true;
 
-	if( console ) console.log( 'Loaded UberMenu Diagnostics' );
+	if( typeof console != "undefined" ) console.log( 'Loaded UberMenu Diagnostics' );
 
 	$( '.ubermenu-item-level-0' ).each( function(){
 
@@ -58,11 +58,21 @@
 
 	//Run General Diagnostics
 
-	var umd = '<div id="ubermenu-diagnostics">';
+	var umd = '<div class="ubermenu-diagnostics-button"><i class="fa fa-stethoscope"></i></div><div id="ubermenu-diagnostics">';
 
 		umd+= '<h3 class="ubermenu-diagnostics-toggle"><i class="fa fa-stethoscope"></i> UberMenu Diagnostics (Alpha)</h3>';
 
 		umd+= '<div class="umd-inner">';
+
+		umd+= 	'<div class="umd-tabs">' +
+					'<a class="umd-tab umd-tab-current" href="#umd-status-check"><i class="fa fa-tachometer"></i> Status Check</a>' + 
+					'<a class="umd-tab" href="#umd-site-data"><i class="fa fa-desktop"></i> Site Info</a>' + 
+					'<a class="umd-tab" href="#umd-tools"><i class="fa fa-wrench"></i> Tools</a>' + 
+				'</div>';
+
+		umd+= '<div class="umd-tab-panels">';
+
+		umd+= '<div id="umd-status-check" class="umd-tab-panel">';
 
 			//Version
 			umd+= umd_notice( 'UberMenu v' + ubermenu_data.v );
@@ -123,7 +133,7 @@
 						}
 						var theme_info = '<a href="'+theme_url+'" target="_blank">'+theme+' v.'+theme_version+'</a>  by <a href="'+author_url+'" target="_blank">'+author+'</a>';
 						//umd+= umd_notice( theme_info );
-						$( '.umd-inner' ).append( umd_notice( theme_info ) );
+						$( '.umd-inner #umd-site-data' ).append( umd_notice( theme_info ) );
 
 					});
 				}
@@ -217,8 +227,29 @@
 
 
 			
-			
+		umd+= '</div>'; // end status-check
+
+
+
+		//Site Data
+		umd+= '<div id="umd-site-data" class="umd-tab-panel">';
+		if( $( 'meta[name="viewport"]' ).length == 0 ){
+			umd+= umd_error( 'Theme is missing viewport meta tag.  Site will not be responsive.' );
+		}
+		else{
+			umd+= umd_notice( 'Viewport meta tag content: ' +  $( 'meta[name="viewport"]' ).attr('content') );
+		}
+		umd+= '</div>'; // end site data tab panel
+
+
+		//Tools
+		umd+= '<div id="umd-tools" class="umd-tab-panel">';
+		umd+= '<a class="umd-tool-button" id="umd-tool-residualstyling-button" href="#">Run Residual Styling Detection / Manual Integration Tool <span class="umd-tool-button-details">This tool will help you determine the code in your theme that needs to be replaced to avoid interference from your theme.</span><i class="fa fa-chevron-right"></i></a>';
+		umd+= '</div>'; // end tools tab panel
 		
+
+		umd+= '</div>'; // end tab panels
+
 		umd+= '</div>';
 
 
@@ -227,8 +258,184 @@
 
 	$( 'body' ).append( umd );
 
-	$( '.ubermenu-diagnostics-toggle' ).on( 'click' , function(){
-		$( '#ubermenu-diagnostics' ).toggleClass( 'ubermenu-diagnostics-collapse' );
+	// $( '.ubermenu-diagnostics-toggle' ).on( 'click' , function(){
+	// 	$( '#ubermenu-diagnostics' ).toggleClass( 'ubermenu-diagnostics-collapse' );
+	// });
+
+	$( '.ubermenu-diagnostics-button' ).on( 'click' , function(){
+		$( 'body' ).toggleClass( 'ubermenu-diagnostics-closed' );
+	});
+
+	$( '.umd-tabs .umd-tab' ).on( 'click' , function(e){
+		e.preventDefault();
+		$( '.umd-tab' ).removeClass( 'umd-tab-current' );
+		$( this ).addClass( 'umd-tab-current' );
+		$( '.umd-tab-panel' ).hide();
+		$( $(this).attr( 'href' ) ).show();
+	});
+
+	$( '#umd-tool-residualstyling-button' ).on( 'click' , function(){
+		//jQuery.get( ubermenu_data.plugin_url + '/pro/diagnostics/diagnostics.tool.residualstyling.php' , '' , function( data ){
+		jQuery.get( ubermenu_data.ajax_url , { 'action' : 'ubermenu_diagnostics_tool_residualstyling' } , function( data ){
+			$( 'body' ).addClass( 'ubermenu-diagnostics-closed' );
+			$( 'body' ).append( data );
+
+			$( '.umd-tool-toggle' ).on( 'click' , function(){
+				$( this ).closest( '.umd-tool' ).toggleClass( 'umd-tool-closed' );
+			});
+
+			$( '.umd-tool-step-next' ).on( 'click' , function(){
+				var $step = $(this).closest( '.umd-tool-step' );
+				var $next = $step.next( '.umd-tool-step' );
+				if( $next.length ){
+					$step.hide();
+					$next.show();
+				}
+			});
+			$( '.umd-tool-step-prev' ).on( 'click' , function(){
+				var $step = $(this).closest( '.umd-tool-step' );
+				var $prev = $step.prev( '.umd-tool-step' );
+				if( $prev.length ){
+					$step.hide();
+					$prev.show();
+				}
+			});
+
+			var $um = false;
+			switch( $( '.ubermenu' ).length ){
+				case 0: 
+					alert( 'No UberMenu found on page' );
+					$( '.umd-tool-rs-multiple-menus' ).hide();
+					break;
+				case 1:
+					$um = $( '.ubermenu' );
+					$( '.umd-tool-rs-multiple-menus' ).hide();
+					break;
+				default:
+					$( '.ubermenu' ).addClass( 'umd-tool-rs-highlight' );
+					$( '.umd-tool-rs-multiple-menus' ).show();
+					$( '.umd-tool-rs-menu-chosen' ).hide();
+					$( '.ubermenu' ).on( 'click' , function(e){
+  						$um = $( '#' + $( this ).attr( 'id' ) );
+  						$( '.ubermenu' ).removeClass( 'umd-tool-rs-highlight' );
+  						$( '.umd-tool-rs-multiple-menus' ).hide();
+						$( '.umd-tool-rs-menu-chosen' ).show();
+						return false;
+					});
+
+					break;
+			}
+
+			
+			var $unwrap_btn = $( '#umd-tool-rs-unwrap' );
+			var $umd_console = $( '.umd-tool-rs-unwrapped-element' );
+			var p_id, p_id_att, p_class, p_class_att, removed_el = '';
+			var wrappers = [];
+
+			//Check for parent being body
+			//Display
+
+			$unwrap_btn.on( 'click' , function(){
+				var $p = $um.parent();
+				if( $p.is( 'body' ) ){
+					$umd_console.prepend( '<div class="umd-tool-warning"><i class="fa fa-warning"></i> Reached &lt;body&gt; tag, cannot unwrap further</div>' );
+					$unwrap_btn.off( 'click' ).addClass( 'umd-tool-btn-disabled' );
+				}
+				else{
+					p_id = $p.attr( 'id' );
+					p_id_att = p_id ? ' id="'+p_id+'" ' : '';
+					p_class = $p.attr( 'class' );
+					p_class_att = p_class ? ' class="'+p_class+'" ' : '';
+					p_tag = $p.prop( 'nodeName' );
+
+					//removed_el = '<' + p_tag.toLowerCase() + p_id_att + p_class_att + '>';
+					removed_el = $p[0].outerHTML.substr( 0 , $p[0].outerHTML.indexOf( '>' )+1 );
+
+					wrappers.unshift( { 
+						'tag' : p_tag.toLowerCase(),
+						'id'  : p_id,
+						'class' : p_class,
+						'el'  : removed_el
+					});
+
+					$umd_console.prepend( $('<code>').text( removed_el ) );
+					//console.log( p_id + ' :: ' + p_class );
+					$um.unwrap();
+				}
+			});
+
+
+			var code_first_line = '', orig_html = '';
+
+			$( '#umd-tool-rs-resolved' ).on( 'click' , function(){
+				if( !wrappers.length ){
+					alert( 'Please remove at least one wrapper' );
+					return false;
+				}
+
+				var $step = $(this).closest( '.umd-tool-step' );
+				var $next = $step.next( '.umd-tool-step' );
+				if( $next.length ){
+					$step.hide();
+					$next.show();
+				}
+
+				var orig_html_close = '' , indent = '   ';
+				wrappers.forEach( function (item, index, array) {
+					if( code_first_line == '' ) code_first_line = item.el;
+					// console.log( index );
+					// console.log( item );
+					orig_html+= indent + item.el + "\n";
+					orig_html_close = indent + '</'+item.tag+">\n" + orig_html_close;
+					indent += '   ';
+				});
+
+				orig_html += indent + "   <?php wp_nav_menu( ... ); ?>\n" + orig_html_close;
+
+				var uber_html = "<?php if( function_exists( 'ubermenu' ) ): ?>\n   <?php ubermenu(); //(generate your specific code in the UberMenu Control Panel) ?>\n<?php else: ?>\n" + 
+					orig_html + "<?php endif; ?>";
+
+
+				$next.find( '#umd-tool-rs-original-wrappers' ).text( orig_html );
+				$next.find( '#umd-tool-rs-new-wrappers' ).text( uber_html );
+
+				//removed_el
+				//p_id, p_class;
+			});
+
+			$( '#umd-tool-rs-search' ).on( 'click' , function(){
+
+				var post_data = {
+					'wrappers' : wrappers,
+					'action' : 'ubermenu_diagnostics_search',
+					'uber_nonce' : $( this ).data( 'nonce' )
+				};
+
+				var $step = $(this).closest( '.umd-tool-step' );
+				var $next = $step.next( '.umd-tool-step' );
+				if( $next.length ){
+					$step.hide();
+					$next.show();
+				}
+
+				//console.log( code_first_line );
+				$( '#umd-tools-rs-code-replace-reminder' ).text( code_first_line );
+				$( '#umd-tools-rs-code-replace-reminder-full' ).text( orig_html );
+
+				$.post( ubermenu_data.ajax_url, post_data , function( data ) {
+					//console.log( data.html );
+					$( '#umd-tools-rs-search-results' ).html( data.html );
+				}, 'json' );
+			});
+
+
+			$( '.umd-tool-step-done' ).on( 'click' , function(){
+				$( '.umd-tool-residual-styling' ).remove();
+			});
+
+			
+		});
+		
 	});
 
 

@@ -47,8 +47,8 @@ function ubermenu_migration_check(){
 		if( $migration_status == false ){
 
 			$notice = __( 'Looks like you\'ve updated to UberMenu 3.  Awesome!  Would you like to migrate your settings?' , 'ubermenu' );
-			$notice.= ' <a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=migration-check').'">'.__( 'Begin Migration' ).'</a>';
-			$notice.= ' <a class="button ubermenu-migrate-dismiss" href="'.admin_url('themes.php?page=ubermenu-settings&do=no-migrate').'">'.__( 'No, thanks' , 'ubermenu' ).'</a>';
+			$notice.= ' <a class="button button-primary" href="'.admin_url('themes.php?page=ubermenu-settings&do=migration-check&ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' )).'">'.__( 'Begin Migration' ).'</a>';
+			$notice.= ' <a class="button ubermenu-migrate-dismiss" href="'.admin_url('themes.php?page=ubermenu-settings&do=no-migrate&ubermenu_nonce='.wp_create_nonce( 'ubermenu-control-panel-do' )).'">'.__( 'No, thanks' , 'ubermenu' ).'</a>';
 
 			$add = true;
 

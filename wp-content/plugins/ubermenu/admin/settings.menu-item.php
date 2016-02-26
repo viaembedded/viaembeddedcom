@@ -596,7 +596,6 @@ function ubermenu_menu_item_settings(){
 		'desc'		=> __( 'Do not display the text for this item' , 'ubermenu' ),
 		'type'		=> 'checkbox',
 		'default' 	=> 'off',
-		'desc'		=> __( '' , 'ubermenu' )
 	);
 
 	$settings['general'][20] = array(
@@ -1566,7 +1565,7 @@ function ubermenu_get_image_size_ops( $exclude = array() ){
 		$o = array(
 			'inherit'	=> array(
 				'name'	=> __( 'Inherit' , 'ubermenu' ),
-				'desc'	=> __( 'Inherit settings from the menu instance settings' , 'ubermenu' )
+				'desc'	=> __( 'Inherit settings from the menu Configuration settings' , 'ubermenu' )
 			),
 			'full'	=> array(
 				'name'	=> __( 'Full' , 'ubermenu' ),

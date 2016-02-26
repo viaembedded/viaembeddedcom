@@ -68,6 +68,7 @@ function ubermenu_load_assets(){
 		'v'					=> UBERMENU_VERSION,
 		'configurations'	=> ubermenu_get_menu_instances(true),
 		'ajax_url' 			=> admin_url( 'admin-ajax.php' ),
+		'plugin_url'		=> UBERMENU_URL,
 	) );
 
 	//Custom JS
@@ -601,8 +602,13 @@ add_filter( 'wp_nav_menu_args' , 'ubermenu_automatic_integration_filter' , 1000 
 function ubermenu_force_filter( $args ){
 
 	if( ubermenu_op( 'force_filter' , 'general' ) == 'on' ){
+		//For main UberMenus
 		if( isset( $args['uber_integration_type'] ) ){
 			$args = ubermenu_get_nav_menu_args( $args , $args['uber_integration_type'] , $args['uber_instance'] );
+		}
+		//For menu segments, replace altered arguments with original array
+		else if( isset( $args['uber_segment'] ) ){
+			if( isset( $args['uber_segment_args'] ) ) $args = $args['uber_segment_args'];
 		}
 	}
 	return $args;

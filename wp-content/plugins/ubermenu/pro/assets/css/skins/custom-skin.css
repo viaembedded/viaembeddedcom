@@ -4,8 +4,10 @@
  * This file shows an example of a custom skin.  It targets any menu that has the Skin set to "None"
  *
  * Copy this to custom/custom.css to apply this custom skin
+ *
+ * For a copy of this file with comments for each style, see https://gist.github.com/sevenspark/24a087689db958670ed5
  */
-/* UberMenu - Copyright 2011-2014, SevenSpark */
+/* UberMenu - Copyright 2011-2016, SevenSpark */
 .ubermenu-skin-none {
   font-size: 12px;
   color: #888888;

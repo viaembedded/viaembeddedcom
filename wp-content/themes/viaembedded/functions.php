@@ -232,6 +232,21 @@ function bsp_maillist_shortcode( $atts ) {
 }
 add_shortcode('bsplist', 'bsp_maillist_shortcode');
 
+/**
+ * Add translation shortcode, only displays the content if the display
+ */
+function translation_shortcode( $atts, $content = null ) {
+    $a = shortcode_atts( array(
+        'lang' => null,
+    ), $atts );
+    $language = pll_current_language('slug');
+    if ($a['lang'] === $language ) {
+        return $content;
+    } else {
+        return '';
+    }
+}
+add_shortcode( 'translate', 'translation_shortcode' );
 
 /**
  * Implement the Custom Header feature.

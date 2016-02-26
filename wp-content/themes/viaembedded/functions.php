@@ -249,6 +249,19 @@ function translation_shortcode( $atts, $content = null ) {
 add_shortcode( 'translate', 'translation_shortcode' );
 
 /**
+ * Return the URL to a page/post in the current language based on an ID
+ */
+function pagelink_shortcode( $atts ) {
+    $a = shortcode_atts( array(
+        'id' => null,
+    ), $atts );
+    $tr_id = pll_get_post($a['id']);
+    $url = get_page_link($tr_id);
+    return $url;
+}
+add_shortcode( 'pagelink', 'pagelink_shortcode' );
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';

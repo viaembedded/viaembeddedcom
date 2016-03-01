@@ -44,6 +44,11 @@ endif;?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/lib/html5shiv.js"></script>
 <![endif]-->
 
+<!-- Escaping the frames -->
+<script>
+    if (top.location!= self.location) { top.location = self.location.href; }
+</script>
+
 <?php wp_head(); ?>
 </head>
 

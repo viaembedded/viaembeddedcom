@@ -58,7 +58,6 @@
 				</div>
 				<div>
 					<strong><?php _e("Europe", "viaembedded"); ?></strong><br>
-					<a href="tel:+49-228-688565-0">+49-228-688565-0</a><br>
 					<a href="mailto:embedded@via-tech.eu">embedded@via-tech.eu</a>
 				</div>
 				<div>

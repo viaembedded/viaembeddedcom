@@ -984,6 +984,10 @@ div.entry-content iframe {
     vertical-align:middle;
 }
 
+.site-info div.corp-contact {
+    vertical-align: top;
+}
+
 #footer-row {
     margin-bottom: 0.75em;
 }

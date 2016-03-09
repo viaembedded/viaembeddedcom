@@ -29,38 +29,38 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/VIA_Logo_small.png" width="108" height="48" alt="Home"></a>
 				</div>
 			        <?php if($language == "cn") { ?>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("China", "viaembedded"); ?></strong><br>
 					<a href="tel:400-818-5166">400-818-5166</a><br>
 					<a href="mailto:embedded@viatech.com.cn">embedded@viatech.com.cn</a>
 				</div>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
 				</div>
 			        <?php } elseif($language == "ja") { ?>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("Japan", "viaembedded"); ?></strong><br>
 					<a href="tel:+81-3-5466-1637">+81-3-5466-1637</a><br>
 					<a href="mailto:embedded@viatech.co.jp">embedded@viatech.co.jp</a>
 				</div>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>
 				</div>
 				<?php } else { ?>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("Americas", "viaembedded"); ?></strong><br>
 					<a href="tel:+1-510-687-4688">+1-510-687-4688</a><br>
 					<a href="mailto:embedded@viatech.com">embedded@viatech.com</a>
 				</div>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("Europe", "viaembedded"); ?></strong><br>
 					<a href="mailto:embedded@via-tech.eu">embedded@via-tech.eu</a>
 				</div>
-				<div>
+				<div class="corp-contact">
 					<strong><?php _e("Rest of the World", "viaembedded"); ?></strong><br>
 					<a href="tel:+886-2-2218-5452">+886-2-2218-5452</a><br>
 					<a href="mailto:embedded@via.com.tw">embedded@via.com.tw</a>

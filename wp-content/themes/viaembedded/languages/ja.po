@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VIA Embedded 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/viaembedded\n"
-"POT-Creation-Date: 2015-09-02 14:51+0800\n"
-"PO-Revision-Date: 2015-09-02 17:38+0800\n"
+"POT-Creation-Date: 2016-03-09 15:04+0800\n"
+"PO-Revision-Date: 2016-03-09 15:05+0800\n"
 "Last-Translator: Gergely Imreh <gergelyimreh@via.com.tw>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -106,13 +106,13 @@ msgstr "続きを読む %s <span class=\"meta-nav\">&rarr;</span>"
 
 #. translators: Footer header
 #: footer.php:18
-msgid "Products"
-msgstr "製品"
+msgid "Newsletter"
+msgstr "ニュースレター"
 
 #. translators: Footer header
 #: footer.php:19
-msgid "Solutions"
-msgstr "ソリューション"
+msgid "Products"
+msgstr "製品"
 
 #. translators: Footer header
 #: footer.php:20
@@ -133,7 +133,7 @@ msgstr "ストア"
 msgid "China"
 msgstr "中国"
 
-#: footer.php:38 footer.php:49 footer.php:65
+#: footer.php:38 footer.php:49 footer.php:64
 msgid "Rest of the World"
 msgstr "その他の地域"
 
@@ -159,15 +159,15 @@ msgstr ""
 
 #. translators: semicolon between the header of an announcement or list, and
 #. the rest, space after colon when approrpriate
-#: functions.php:203
+#: functions.php:204
 msgid ": "
 msgstr "："
 
-#: functions.php:204
+#: functions.php:205
 msgid "Important"
 msgstr "お知らせ"
 
-#: functions.php:204
+#: functions.php:205
 msgid ""
 "By downloading these software packages, you indicate your acceptance of the "
 "<a href=\"%s\">VIA Software License agreement</a>. If you do not agree with "
@@ -177,11 +177,11 @@ msgstr ""
 "\">VIAソフトウェア使用許諾契約</a>に同意を示しています。契約条件のいずれかに"
 "同意しない場合は、ソフトウェアをダウンロードすることはご遠慮ください。"
 
-#: header.php:47
+#: header.php:72
 msgid "Menu"
 msgstr "メニュー"
 
-#: header.php:48
+#: header.php:73
 msgid "Skip to content"
 msgstr ""
 
@@ -349,8 +349,8 @@ msgstr "アーカイブ"
 
 #. translators: %s: Name of a post category
 #: page-home-cn.php:37 page-home-cn.php:73 page-home-ja.php:37
-#: page-home-ja.php:73 page-home-tw.php:37 page-home-tw.php:73 page-home.php:37
-#: page-home.php:73
+#: page-home-ja.php:73 page-home-tw.php:37 page-home-tw.php:73
+#: page-home.php:37 page-home.php:73
 msgid "Latest in %s"
 msgstr "最新の%s"
 
@@ -381,3 +381,6 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Product Page"
 msgstr ""
+
+#~ msgid "Solutions"
+#~ msgstr "ソリューション"

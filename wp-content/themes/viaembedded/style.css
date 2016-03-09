@@ -1775,7 +1775,9 @@ div#response {
 --------------------------------------------------------------*/
 
 div#mc_embed_signup {
+    font-size: 18px;
     padding-bottom: 1.5em;
+    font-family: "Open Sans", "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
 }
 
 .mc-field-group.input-group ul li {
@@ -1785,8 +1787,15 @@ div#mc_embed_signup {
     padding-right: 10px;
 }
 
-label[for=mce-EMAIL] {
+div.mc-field-group > label {
     font-weight: bold;
+}
+
+.mc-field-group.input-group {
+}
+
+.mc-field-group.input-group > ul > li > label{
+    padding-left: 10px;
 }
 
 /* From: http://cdn-images.mailchimp.com/embedcode/classic-081711.css */

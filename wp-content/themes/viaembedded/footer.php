@@ -15,8 +15,8 @@
 <div id="footer-row" class="full">
 	<div id="footer-banner" class="full">
 		<ul>
+	               <li><a href="<?php $tr_id = pll_get_post(10295, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Newsletter", "viaembedded"); ?></a></li>
 	               <li><a href="<?php $tr_id = pll_get_post(12, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Products", "viaembedded"); ?></a></li>
-	               <li><a href="<?php $tr_id = pll_get_post(34, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Solutions", "viaembedded"); ?></a></li>
 	               <li><a href="<?php $tr_id = pll_get_post(35, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Services", "viaembedded"); ?></a></li>
 	               <li><a href="<?php $tr_id = pll_get_post(1076, $language); echo get_page_link($tr_id); ?>"><?php /* translators: Footer header */ _e("Contact", "viaembedded"); ?></a></li>
 	               <li><a href="/store/"><?php /* translators: Footer header */ _e("Store", "viaembedded"); ?></a></li>

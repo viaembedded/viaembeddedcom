@@ -58,6 +58,7 @@
 				</div>
 				<div class="corp-contact">
 					<strong><?php _e("Europe", "viaembedded"); ?></strong><br>
+					<a href="tel:+39-342-5754296">+39-342-5754296</a><br>
 					<a href="mailto:embedded@via-tech.eu">embedded@via-tech.eu</a>
 				</div>
 				<div class="corp-contact">
